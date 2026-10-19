@@ -4,8 +4,8 @@
 
 - `index.html`: the pay-after website offer for US businesses
 - `privacy/index.html`: the US privacy notice
-- `assets/`: stylesheet, self-hosted fonts, logo, favicon and share image
+- `assets/`: stylesheet, form script, self-hosted fonts, logo, favicon, share image, project screenshots and team photos
 
-No forms, cookies, analytics or trackers. Lead data, notes, briefs and anything else private never belong in this repository.
+The page has one form. It sends what the visitor enters to HubSpot (Digital Movement's CRM) only when the visitor presses the button. No cookies, analytics or trackers. Lead data, notes, briefs and anything else private never belong in this repository.
 
-Version 1.1 · 2026-10-19 · © 2026 Digital Movement Marketing Ltd
+Version 1.2 · 2026-10-19 · © 2026 Digital Movement Marketing Ltd
