@@ -1,7 +1,7 @@
-/* Digital Movement US landing page · v1.2 · 2026-10-19
+/* Digital Movement US landing page · v1.2.3 · 2026-10-19
    Hero form → HubSpot form "US | Landing page form | v1.2" (portal 149472643) via the public Forms submission API.
    Nothing is sent before the visitor presses the button; "No" to either question sends nothing (like the ad form).
-   Phone required, email optional (house rule). Also runs the sticky mobile CTA. No cookies, no trackers. */
+   Phone and email required (v1.2.3, Raoul 19.10.: HubSpot creates no contact without an email). Also runs the sticky mobile CTA. No cookies, no trackers. */
 (function () {
   'use strict';
   var form = document.getElementById('lead-form');
@@ -73,7 +73,7 @@
       var p = value('phone');
       check('phone', phoneDigits(p) >= 10 && phoneDigits(p) <= 15 && /^[+\d(][\d\s().\-]*$/.test(p), form.elements.phone, 'e-phone');
       var em = value('email');
-      check('email', em === '' || emailOk(em), form.elements.email, 'e-email');
+      check('email', emailOk(em), form.elements.email, 'e-email');
       check('company', value('company').length >= 2, form.elements.company, 'e-company');
       check('consent', form.elements.consent.checked, form.elements.consent, 'e-consent');
       return { ok: ok, first: first };
@@ -89,7 +89,7 @@
 
       var parts = value('name').split(/\s+/);
       var lines = [
-        'Source: US landing page form v1.2 (' + location.href.split('#')[0] + ')',
+        'Source: US landing page form v1.2.3 (' + location.href.split('#')[0] + ')',
         Q_OWNER + ' → ' + (radio('owner') === 'yes' ? 'Yes' : 'No'),
         Q_BUDGET + ' → ' + (radio('budget') === 'yes' ? 'Yes' : 'No'),
         'Calls and texts consent → Yes (box ticked)',
@@ -100,10 +100,10 @@
         { objectTypeId: '0-1', name: 'firstname', value: parts[0] },
         { objectTypeId: '0-1', name: 'lastname', value: parts.slice(1).join(' ') },
         { objectTypeId: '0-1', name: 'phone', value: value('phone') },
+        { objectTypeId: '0-1', name: 'email', value: value('email') },
         { objectTypeId: '0-1', name: 'company', value: value('company') },
         { objectTypeId: '0-1', name: 'message', value: lines.join('\n') }
       ];
-      if (value('email')) fields.push({ objectTypeId: '0-1', name: 'email', value: value('email') });
 
       btn.disabled = true; btn.textContent = 'Sending…';
       fetch(endpoint, {
@@ -123,7 +123,7 @@
       btn.disabled = false; btn.textContent = 'Request my preview';
       var msg = 'Sorry, your request did not go through. Please try again, or call +44 7865 064463 or email office@digitalmovement.uk.';
       var errs = body && body.errors ? body.errors.map(function (x) { return x.message || ''; }).join(' ') : '';
-      if (/email/i.test(errs)) { showError(form.elements.email, 'e-email', true); msg = 'Please check your email address, or leave it empty.'; }
+      if (/email/i.test(errs)) { showError(form.elements.email, 'e-email', true); msg = 'Please check your email address.'; }
       else if (/phone/i.test(errs)) { showError(form.elements.phone, 'e-phone', true); msg = 'Please check your phone number.'; }
       alertBox.textContent = msg; alertBox.hidden = false;
     };

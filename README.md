@@ -8,4 +8,4 @@
 
 The page has one form. It sends what the visitor enters to HubSpot (Digital Movement's CRM) only when the visitor presses the button. No cookies, analytics or trackers. Lead data, notes, briefs and anything else private never belong in this repository.
 
-Version 1.2 · 2026-10-19 · © 2026 Digital Movement Marketing Ltd
+Version 1.2.3 · 2026-10-19 · © 2026 Digital Movement Marketing Ltd
