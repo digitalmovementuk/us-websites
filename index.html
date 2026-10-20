@@ -1,5 +1,5 @@
 <!doctype html>
-<!-- Digital Movement US · pay-after website landing page · v1.2.3 · 2026-10-19 · change log: landing-page/README.md -->
+<!-- Digital Movement US · pay-after website landing page · v1.3 · 2026-10-20 · light-theme adaptation of dmtradies.com.au · change log: landing-page/README.md -->
 <html lang="en-US">
 <head>
 <meta charset="utf-8">
@@ -8,12 +8,13 @@
 <meta name="description" content="We build your WordPress website first. Unlimited feedback rounds on the agreed pages, and you pay $2,495 one-time only after you approve it. No deposit. No card.">
 <meta name="robots" content="noindex, follow">
 <link rel="canonical" href="https://us.digitalmovement.uk/">
-<meta name="theme-color" content="#1A0E2E">
+<meta name="theme-color" content="#FFFFFF">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="assets/favicon-192.png" type="image/png" sizes="192x192">
 <link rel="apple-touch-icon" href="assets/favicon-192.png">
+<link rel="preload" href="assets/fonts/outfit-variable.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/plus-jakarta-sans.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="assets/fonts/inter-tight.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/anton.woff2" as="font" type="font/woff2" crossorigin>
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Digital Movement US">
 <meta property="og:locale" content="en_US">
@@ -31,7 +32,8 @@
 <meta name="twitter:description" content="We build your WordPress website first. You pay $2,495 one-time, only after you approve the private preview. No deposit. No card.">
 <meta name="twitter:image" content="https://us.digitalmovement.uk/assets/og-us-websites-v1.1.jpg">
 <meta name="twitter:image:alt" content="Digital Movement. See your website before you pay. $2,495 one-time, paid only after you approve it.">
-<link rel="stylesheet" href="assets/style-v1.2.css">
+<link rel="stylesheet" href="assets/style-v1.3.css">
+<script>document.documentElement.classList.add('js');</script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
 {"@type":"Organization","@id":"https://us.digitalmovement.uk/#org","name":"Digital Movement","legalName":"Digital Movement Marketing Ltd","url":"https://us.digitalmovement.uk/","logo":"https://us.digitalmovement.uk/assets/favicon-512.png","email":"office@digitalmovement.uk","telephone":"+44 7865 064463","identifier":{"@type":"PropertyValue","propertyID":"Companies House company number","value":"17110525"},"address":{"@type":"PostalAddress","streetAddress":"128 City Road","addressLocality":"London","postalCode":"EC1V 2NX","addressCountry":"GB"}},
@@ -40,280 +42,296 @@
 {"@type":"Question","name":"How many changes can I ask for?","acceptedAnswer":{"@type":"Answer","text":"As many as you like. Feedback rounds are unlimited on the agreed pages until you approve your website. New features or pages outside the agreed scope need their own quote."}},
 {"@type":"Question","name":"What happens if I don't approve the preview?","acceptedAnswer":{"@type":"Answer","text":"Then you don't pay for the build. No approval, no invoice: we close the preview. Not replying doesn't count as approval. Your own material, such as your text, photos and domain, stays yours."}},
 {"@type":"Question","name":"Who is this offer for?","acceptedAnswer":{"@type":"Answer","text":"Business owners and decision-makers in the United States who need a new website or a redesign of their current one. The form asks two quick questions to check the fit."}},
-{"@type":"Question","name":"Why are your Google reviews on an Australian profile?","acceptedAnswer":{"@type":"Answer","text":"Digital Movement started in Melbourne, Australia, and its Google reviews sit on that profile. The US offer is made by our UK company, Digital Movement Marketing Ltd."}},
+{"@type":"Question","name":"Who is behind Digital Movement?","acceptedAnswer":{"@type":"Answer","text":"Digital Movement is one team. The US offer is made and invoiced by our UK company, Digital Movement Marketing Ltd. Its directors are Raoul Müller and Martey Quaye, both identity-verified at Companies House."}},
 {"@type":"Question","name":"Can I move my website to another provider later?","acceptedAnswer":{"@type":"Answer","text":"Yes. It's a WordPress website, so it can move to another provider. On payment, we transfer the custom work we own and can assign, with a license inventory. WordPress itself and third-party themes, plugins, fonts and images keep their own licenses, and the inventory lists them."}},
 {"@type":"Question","name":"How long does it take?","acceptedAnswer":{"@type":"Answer","text":"We confirm the build timing on our first call, once we know your pages and what content you already have. We don't promise a delivery date before that."}}
 ]}
 ]}
 </script>
 </head>
-<body>
-<a class="skip" href="#main">Skip to content</a>
-<div class="topline" aria-hidden="true"></div>
+<body class="home">
+<a class="skip-link" href="#main">Skip to content</a>
+<svg class="svg-defs" aria-hidden="true" focusable="false">
+  <defs>
+    <linearGradient id="usGd" gradientUnits="userSpaceOnUse" x1="2" y1="3" x2="22" y2="21"><stop offset="0" stop-color="#E8561F"/><stop offset=".52" stop-color="#D63C8E"/><stop offset="1" stop-color="#7A4FC4"/></linearGradient>
+    <linearGradient id="dmtTopGrad" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFDC69"/><stop offset=".34" stop-color="#FF7C46"/><stop offset=".68" stop-color="#ED5BBF"/><stop offset="1" stop-color="#A378FF"/></linearGradient>
+  </defs>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+  <symbol id="i-ext" viewBox="0 0 24 24"><path d="M7 17 17 7M8.5 7H17v8.5"/></symbol>
+  <symbol id="i-up" viewBox="0 0 24 24"><path d="M12 19V5M6 11l6-6 6 6"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M21.5 16.6v2.9a1.9 1.9 0 0 1-2.1 1.9 18.8 18.8 0 0 1-8.2-2.9 18.5 18.5 0 0 1-5.7-5.7A18.8 18.8 0 0 1 2.6 4.6 1.9 1.9 0 0 1 4.5 2.5h2.9a1.9 1.9 0 0 1 1.9 1.6c.1.9.4 1.8.7 2.6a1.9 1.9 0 0 1-.4 2L8.3 9.9a15.2 15.2 0 0 0 5.7 5.7l1.2-1.2a1.9 1.9 0 0 1 2-.4c.8.3 1.7.6 2.6.7a1.9 1.9 0 0 1 1.7 1.9z"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/><path d="m3 7.5 9 6 9-6"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7.5V12l3 2"/></symbol>
+  <symbol id="i-building" viewBox="0 0 24 24"><path d="M4 21V5.5A1.5 1.5 0 0 1 5.5 4h8A1.5 1.5 0 0 1 15 5.5V21M15 10h3.5a1.5 1.5 0 0 1 1.5 1.5V21M2.5 21h19M8 8h3M8 12h3M8 16h3"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.1-7-11.4a7 7 0 0 1 14 0C19 14.9 12 21 12 21z"/><circle cx="12" cy="9.6" r="2.6"/></symbol>
+  <symbol id="i-desktop" viewBox="0 0 24 24"><rect x="2.5" y="4" width="19" height="12.5" rx="2"/><path d="M8.5 20.5h7M12 16.5v4"/></symbol>
+  <symbol id="i-iphone" viewBox="0 0 24 24"><rect x="6.5" y="2.5" width="11" height="19" rx="2.6"/><path d="M10.5 5.3h3"/></symbol>
+  <symbol id="i-android" viewBox="0 0 24 24"><rect x="6.5" y="2.5" width="11" height="19" rx="1.4"/><circle cx="12" cy="5.4" r=".8"/><path d="M10 18.6h4"/></symbol>
+  <symbol id="i-tablet" viewBox="0 0 24 24"><rect x="3.5" y="3" width="17" height="18" rx="2.2"/><path d="M11 18.2h2"/></symbol>
+  <symbol id="i-s1" viewBox="0 0 24 24"><path d="M8.5 4H6.5A1.5 1.5 0 0 0 5 5.5v14A1.5 1.5 0 0 0 6.5 21h11a1.5 1.5 0 0 0 1.5-1.5v-14A1.5 1.5 0 0 0 17.5 4h-2M9 2.8h6v2.6H9zM8.5 11h7M8.5 15h5"/></symbol>
+  <symbol id="i-s2" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M9 9v11"/></symbol>
+  <symbol id="i-s3" viewBox="0 0 24 24"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></symbol>
+  <symbol id="i-s4" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.7 2.7 5.3-5.7"/></symbol>
+  <symbol id="i-ig" viewBox="0 0 24 24"><rect x="3.2" y="3.2" width="17.6" height="17.6" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4.1" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.3" cy="6.7" r="1.25" fill="currentColor"/></symbol>
+  <symbol id="i-fb" viewBox="0 0 24 24"><path fill="currentColor" d="M13.6 21.5v-8.2h2.8l.4-3.3h-3.2V7.9c0-.9.3-1.6 1.6-1.6h1.7V3.4c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3V10H7.4v3.3h2.8v8.2h3.4z"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2.8l2.75 5.86 6.43.74-4.78 4.37 1.3 6.34L12 16.9l-5.7 3.21 1.3-6.34L2.82 9.4l6.43-.74z"/></symbol>
+  <symbol id="i-stars5" viewBox="0 0 120 24"><g fill="currentColor"><path d="M12 2.8l2.75 5.86 6.43.74-4.78 4.37 1.3 6.34L12 16.9l-5.7 3.21 1.3-6.34L2.82 9.4l6.43-.74z"/><path transform="translate(24 0)" d="M12 2.8l2.75 5.86 6.43.74-4.78 4.37 1.3 6.34L12 16.9l-5.7 3.21 1.3-6.34L2.82 9.4l6.43-.74z"/><path transform="translate(48 0)" d="M12 2.8l2.75 5.86 6.43.74-4.78 4.37 1.3 6.34L12 16.9l-5.7 3.21 1.3-6.34L2.82 9.4l6.43-.74z"/><path transform="translate(72 0)" d="M12 2.8l2.75 5.86 6.43.74-4.78 4.37 1.3 6.34L12 16.9l-5.7 3.21 1.3-6.34L2.82 9.4l6.43-.74z"/><path transform="translate(96 0)" d="M12 2.8l2.75 5.86 6.43.74-4.78 4.37 1.3 6.34L12 16.9l-5.7 3.21 1.3-6.34L2.82 9.4l6.43-.74z"/></g></symbol>
+  <symbol id="i-g" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.76h3.56c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.56-2.76c-.99.66-2.25 1.06-3.72 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84A11 11 0 0 0 12 23z"/><path fill="#FBBC05" d="M5.84 14.11a6.6 6.6 0 0 1 0-4.22V7.05H2.18a11 11 0 0 0 0 9.9l3.66-2.84z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15A10.6 10.6 0 0 0 12 1 11 11 0 0 0 2.18 7.05l3.66 2.84C6.71 7.31 9.14 5.38 12 5.38z"/></symbol>
+</svg>
 
-<header class="site-header dark">
-  <div class="wrap header">
-    <a class="brand" href="./" aria-label="Digital Movement home">
-      <img src="assets/dm-logo-light.svg" alt="Digital Movement" width="268" height="30">
-    </a>
-    <nav class="nav" aria-label="Page">
-      <a href="#how">How it works</a>
-      <a href="#work">Our work</a>
-      <a href="#reviews">Reviews</a>
-      <a href="#faq">FAQ</a>
-    </nav>
-    <div class="header-cta">
-      <a class="header-phone" href="tel:+447865064463">+44 7865 064463</a>
-      <a class="btn btn-sm" href="#request">Request your preview</a>
+<div class="topbar">
+  <div class="wrap topbar-in">
+    <div class="topbar-l">
+      <div class="topbar-social"><a href="https://www.instagram.com/digitalmovement_us/" target="_blank" rel="noopener" aria-label="Digital Movement US on Instagram"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-ig"/></svg></a><a href="https://www.facebook.com/profile.php?id=1459257597261170" target="_blank" rel="noopener" aria-label="Digital Movement US on Facebook"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-fb"/></svg></a></div>
+      <a class="topbar-rating" href="#reviews"><svg class="stars5" viewBox="0 0 120 24" aria-hidden="true" focusable="false"><use href="#i-stars5"/></svg><b>5.0</b><span>on Google<span class="tr-long"> · 100 reviews</span></span></a>
+      <span class="topbar-fact">UK company 17110525 · No deposit</span>
+    </div>
+    <div class="topbar-r">
+      <a class="topbar-link topbar-call" href="tel:+447865064463" aria-label="Call our UK office at +44 7865 064463"><span class="topbar-ring" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><use href="#i-phone"/></svg></span><span>+44 7865 064463</span></a>
+      <a class="topbar-link topbar-email" href="mailto:office@digitalmovement.uk"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-mail"/></svg><span>office@digitalmovement.uk</span></a>
     </div>
   </div>
+</div>
+
+<header class="site" id="siteHeader">
+  <div class="wrap">
+    <nav class="nav" aria-label="Main">
+      <a class="brand" href="./" aria-label="Digital Movement, websites for US businesses">
+        <img class="brand-logo" src="assets/dm-logo-positive-crop-v1.3.svg" alt="Digital Movement" width="217" height="26">
+        <span class="brand-by">Websites for US businesses</span>
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="#how">How it works</a><a href="#work">Our work</a><a href="#reviews">Reviews</a><a href="#faq">FAQ</a>
+      </div>
+      <div class="nav-right">
+        <a class="btn btn--primary btn--sm nav-cta" href="#request">Request your preview<span class="btn-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><use href="#i-arrow"/></svg></span></a>
+        <a class="call-mini" href="tel:+447865064463" aria-label="Call our UK office at +44 7865 064463"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-phone"/></svg></a>
+        <button class="burger" id="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="drawer"><i></i><i></i><i></i></button>
+      </div>
+    </nav>
+  </div>
+  <span class="scroll-progress" aria-hidden="true"><i id="scrollProgress"></i></span>
 </header>
+<div class="drawer" id="drawer">
+  <div class="drawer-panel">
+    <a href="#how" class="dl">How it works <span>01</span></a><a href="#work" class="dl">Our work <span>02</span></a><a href="#reviews" class="dl">Reviews <span>03</span></a><a href="#faq" class="dl">FAQ <span>04</span></a>
+    <div class="drawer-foot">
+      <a class="btn btn--primary btn--block" href="#request"><span class="btn-label">Request your preview</span><span class="btn-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><use href="#i-arrow"/></svg></span></a>
+      <p class="fine">Digital Movement Marketing Ltd · UK company 17110525</p>
+    </div>
+  </div>
+</div>
 
 <main id="main">
-  <section class="dark hero" aria-labelledby="hero-title">
-    <div class="wrap hero-inner">
-      <div class="hero-copy">
-        <p class="eyebrow">Websites for US businesses</p>
-        <h1 id="hero-title">See your website <em>before you pay.</em></h1>
-        <p class="lead">We build your WordPress website first. You review every agreed page in a private preview, ask for changes as often as you like, and pay $2,495 one-time only after you approve it. No deposit. No card.</p>
-        <ul class="guarantees" aria-label="Our guarantees">
-          <li><span class="g-icon" aria-hidden="true"></span><span><strong>Unlimited feedback rounds</strong> on the agreed pages, until you approve</span></li>
-          <li><span class="g-icon" aria-hidden="true"></span><span><strong>Payment only when you approve.</strong> No approval, no invoice</span></li>
+  <section class="hero" id="home" aria-labelledby="hero-title">
+    <div class="aurora" aria-hidden="true"><span class="a1"></span><span class="a2"></span><span class="a3"></span><span class="a4"></span></div>
+    <span class="sweep" aria-hidden="true"></span>
+    <svg class="hero-waves" viewBox="0 0 1600 800" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false"><defs><linearGradient id="hwG" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#FFDC69"/><stop offset=".34" stop-color="#FF7C46"/><stop offset=".68" stop-color="#ED5BBF"/><stop offset="1" stop-color="#A378FF"/></linearGradient></defs><g class="hw-base"><path d="M-100 513.5 L-50 526.4 L0 540.0 L50 553.6 L100 566.5 L150 578.0 L200 587.5 L250 594.6 L300 599.1 L350 600.9 L400 600.0 L450 596.9 L500 592.0 L550 585.7 L600 578.7 L650 571.6 L700 564.8 L750 558.9 L800 554.2 L850 550.8 L900 548.7 L950 547.8 L1000 547.7 L1050 548.1 L1100 548.6 L1150 548.6 L1200 547.7 L1250 545.5 L1300 541.8 L1350 536.5 L1400 529.7 L1450 521.5 L1500 512.5 L1550 503.2 L1600 494.0 L1650 485.7 L1700 478.9 L1750 474.2 L1800 471.9"/><path d="M-100 591.8 L-50 604.7 L0 616.1 L50 625.2 L100 631.6 L150 635.3 L200 636.1 L250 634.2 L300 629.9 L350 623.7 L400 616.2 L450 607.9 L500 599.5 L550 591.6 L600 584.4 L650 578.5 L700 573.9 L750 570.7 L800 568.6 L850 567.4 L900 566.7 L950 566.1 L1000 565.1 L1050 563.2 L1100 560.2 L1150 555.8 L1200 550.1 L1250 543.0 L1300 534.9 L1350 526.2 L1400 517.5 L1450 509.2 L1500 502.1 L1550 496.8 L1600 493.8 L1650 493.4 L1700 495.9 L1750 501.4 L1800 509.8"/><path d="M-100 666.1 L-50 671.7 L0 674.2 L50 673.7 L100 670.3 L150 664.5 L200 656.8 L250 647.7 L300 637.8 L350 627.9 L400 618.4 L450 609.8 L500 602.4 L550 596.4 L600 591.7 L650 588.3 L700 585.8 L750 583.9 L800 582.1 L850 579.9 L900 577.1 L950 573.3 L1000 568.3 L1050 562.1 L1100 554.9 L1150 547.0 L1200 538.7 L1250 530.7 L1300 523.5 L1350 517.8 L1400 514.0 L1450 512.8 L1500 514.4 L1550 519.0 L1600 526.7 L1650 537.1 L1700 550.0 L1750 564.7 L1800 580.7"/><path d="M-100 713.3 L-50 708.3 L0 700.7 L50 691.1 L100 680.2 L150 668.5 L200 656.8 L250 645.5 L300 635.3 L350 626.3 L400 618.7 L450 612.6 L500 607.7 L550 603.8 L600 600.6 L650 597.6 L700 594.3 L750 590.6 L800 586.0 L850 580.4 L900 573.9 L950 566.7 L1000 559.0 L1050 551.3 L1100 544.1 L1150 538.0 L1200 533.7 L1250 531.6 L1300 532.2 L1350 535.8 L1400 542.4 L1450 552.2 L1500 564.6 L1550 579.4 L1600 596.0 L1650 613.5 L1700 631.3 L1750 648.4 L1800 664.3"/><path d="M-100 726.4 L-50 713.5 L0 699.9 L50 686.3 L100 673.3 L150 661.2 L200 650.6 L250 641.4 L300 633.8 L350 627.5 L400 622.3 L450 617.8 L500 613.6 L550 609.4 L600 604.8 L650 599.5 L700 593.5 L750 586.9 L800 579.7 L850 572.3 L900 565.2 L950 558.9 L1000 554.0 L1050 551.1 L1100 550.6 L1150 553.0 L1200 558.5 L1250 567.1 L1300 578.7 L1350 593.0 L1400 609.5 L1450 627.5 L1500 646.3 L1550 665.1 L1600 683.0 L1650 699.3 L1700 713.4 L1750 724.7 L1800 733.1"/><path d="M-100 716.2 L-50 701.4 L0 687.7 L50 675.5 L100 664.8 L150 655.8 L200 648.2 L250 641.8 L300 636.3 L350 631.2 L400 626.1 L450 620.8 L500 615.1 L550 608.8 L600 602.1 L650 595.1 L700 588.2 L750 581.8 L800 576.5 L850 572.9 L900 571.3 L950 572.4 L1000 576.5 L1050 583.7 L1100 594.0 L1150 607.2 L1200 623.0 L1250 640.8 L1300 660.0 L1350 679.6 L1400 698.9 L1450 717.1 L1500 733.4 L1550 747.3 L1600 758.1 L1650 765.8 L1700 770.1 L1750 771.2 L1800 769.3"/><path d="M-100 700.8 L-50 689.0 L0 678.8 L50 670.3 L100 663.0 L150 656.6 L200 650.8 L250 645.2 L300 639.6 L350 633.6 L400 627.4 L450 620.8 L500 614.2 L550 607.9 L600 602.4 L650 598.2 L700 595.7 L750 595.5 L800 598.1 L850 603.7 L900 612.4 L950 624.1 L1000 638.7 L1050 655.6 L1100 674.3 L1150 694.1 L1200 714.0 L1250 733.4 L1300 751.3 L1350 767.1 L1400 780.1 L1450 789.9 L1500 796.3 L1550 799.3 L1600 798.9 L1650 795.7 L1700 790.0 L1750 782.4 L1800 773.7"/><path d="M-100 693.6 L-50 685.8 L0 679.1 L50 673.1 L100 667.3 L150 661.7 L200 655.9 L250 649.9 L300 643.8 L350 637.9 L400 632.4 L450 627.9 L500 624.8 L550 623.6 L600 624.7 L650 628.7 L700 635.6 L750 645.6 L800 658.4 L850 674.0 L900 691.6 L950 710.7 L1000 730.6 L1050 750.4 L1100 769.2 L1150 786.2 L1200 800.8 L1250 812.4 L1300 820.6 L1350 825.2 L1400 826.3 L1450 824.0 L1500 818.8 L1550 811.2 L1600 801.8 L1650 791.4 L1700 780.6 L1750 770.0 L1800 760.0"/><path d="M-100 697.9 L-50 692.6 L0 687.4 L50 682.2 L100 676.9 L150 671.6 L200 666.6 L250 662.3 L300 658.9 L350 657.1 L400 657.2 L450 659.7 L500 664.9 L550 673.0 L600 684.0 L650 697.7 L700 713.8 L750 731.7 L800 750.8 L850 770.2 L900 789.2 L950 806.9 L1000 822.4 L1050 835.3 L1100 844.8 L1150 850.7 L1200 853.0 L1250 851.5 L1300 846.8 L1350 839.1 L1400 829.2 L1450 817.7 L1500 805.3 L1550 792.7 L1600 780.5 L1650 769.3 L1700 759.3 L1750 750.9 L1800 744.0"/></g><g class="hw-pulse"><path class="p0" d="M-100 513.5 L-50 526.4 L0 540.0 L50 553.6 L100 566.5 L150 578.0 L200 587.5 L250 594.6 L300 599.1 L350 600.9 L400 600.0 L450 596.9 L500 592.0 L550 585.7 L600 578.7 L650 571.6 L700 564.8 L750 558.9 L800 554.2 L850 550.8 L900 548.7 L950 547.8 L1000 547.7 L1050 548.1 L1100 548.6 L1150 548.6 L1200 547.7 L1250 545.5 L1300 541.8 L1350 536.5 L1400 529.7 L1450 521.5 L1500 512.5 L1550 503.2 L1600 494.0 L1650 485.7 L1700 478.9 L1750 474.2 L1800 471.9" style="animation-delay:-0.0s"/><path class="p2" d="M-100 666.1 L-50 671.7 L0 674.2 L50 673.7 L100 670.3 L150 664.5 L200 656.8 L250 647.7 L300 637.8 L350 627.9 L400 618.4 L450 609.8 L500 602.4 L550 596.4 L600 591.7 L650 588.3 L700 585.8 L750 583.9 L800 582.1 L850 579.9 L900 577.1 L950 573.3 L1000 568.3 L1050 562.1 L1100 554.9 L1150 547.0 L1200 538.7 L1250 530.7 L1300 523.5 L1350 517.8 L1400 514.0 L1450 512.8 L1500 514.4 L1550 519.0 L1600 526.7 L1650 537.1 L1700 550.0 L1750 564.7 L1800 580.7" style="animation-delay:-3.8s"/><path class="p1" d="M-100 726.4 L-50 713.5 L0 699.9 L50 686.3 L100 673.3 L150 661.2 L200 650.6 L250 641.4 L300 633.8 L350 627.5 L400 622.3 L450 617.8 L500 613.6 L550 609.4 L600 604.8 L650 599.5 L700 593.5 L750 586.9 L800 579.7 L850 572.3 L900 565.2 L950 558.9 L1000 554.0 L1050 551.1 L1100 550.6 L1150 553.0 L1200 558.5 L1250 567.1 L1300 578.7 L1350 593.0 L1400 609.5 L1450 627.5 L1500 646.3 L1550 665.1 L1600 683.0 L1650 699.3 L1700 713.4 L1750 724.7 L1800 733.1" style="animation-delay:-7.6s"/><path class="p0" d="M-100 700.8 L-50 689.0 L0 678.8 L50 670.3 L100 663.0 L150 656.6 L200 650.8 L250 645.2 L300 639.6 L350 633.6 L400 627.4 L450 620.8 L500 614.2 L550 607.9 L600 602.4 L650 598.2 L700 595.7 L750 595.5 L800 598.1 L850 603.7 L900 612.4 L950 624.1 L1000 638.7 L1050 655.6 L1100 674.3 L1150 694.1 L1200 714.0 L1250 733.4 L1300 751.3 L1350 767.1 L1400 780.1 L1450 789.9 L1500 796.3 L1550 799.3 L1600 798.9 L1650 795.7 L1700 790.0 L1750 782.4 L1800 773.7" style="animation-delay:-11.4s"/><path class="p2" d="M-100 697.9 L-50 692.6 L0 687.4 L50 682.2 L100 676.9 L150 671.6 L200 666.6 L250 662.3 L300 658.9 L350 657.1 L400 657.2 L450 659.7 L500 664.9 L550 673.0 L600 684.0 L650 697.7 L700 713.8 L750 731.7 L800 750.8 L850 770.2 L900 789.2 L950 806.9 L1000 822.4 L1050 835.3 L1100 844.8 L1150 850.7 L1200 853.0 L1250 851.5 L1300 846.8 L1350 839.1 L1400 829.2 L1450 817.7 L1500 805.3 L1550 792.7 L1600 780.5 L1650 769.3 L1700 759.3 L1750 750.9 L1800 744.0" style="animation-delay:-15.2s"/></g></svg>
+    <span class="stars" aria-hidden="true"></span>
+    <span class="stars2" aria-hidden="true"></span>
+    <div class="wrap">
+      <div class="hero-inner">
+        <div class="hero-copy rv">
+          <p class="eyebrow">Websites for US businesses</p>
+          <h1 id="hero-title"><span class="h-solid">See your website <em>before you pay</em>.</span></h1>
+          <p class="hero-sub">We build your WordPress website first. You review every agreed page in a private preview, ask for changes as often as you like, and pay $2,495 one-time only after you approve it. No deposit. No card.</p>
+          <div class="found-on">
+            <span class="fo-label">Preview it on:</span>
+            <ul class="fo-list">
+              <li><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-desktop"/></svg>Desktop</li>
+              <li><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-iphone"/></svg>iPhone</li>
+              <li><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-android"/></svg>Android</li>
+              <li><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-tablet"/></svg>Tablet</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="hero-form lead rv" id="request" data-prefix="h-" data-source="hero">
+          <div class="hf-head">
+            <div class="hf-top">
+              <span class="hf-tag"><i aria-hidden="true"></i>Callback within 1 business day</span>
+              <a class="hf-rating" href="#reviews" aria-label="5.0 stars from 100 Google reviews"><svg class="stars5" viewBox="0 0 120 24" aria-hidden="true" focusable="false"><use href="#i-stars5"/></svg><b>5.0</b><span class="hf-count">100 Google reviews</span></a>
+            </div>
+            <h2 id="h-title">Request your preview</h2>
+            <p>Answer two quick questions, leave your phone number, and Raoul will call you back to talk through services, pages and timing.</p>
+          </div>
+          <form id="h-form" novalidate aria-labelledby="h-title" data-endpoint="https://api.hsforms.com/submissions/v3/integration/submit/149472643/441b02d8-30a7-4d1b-91f3-981f87f298b0">
+            <fieldset class="q" id="h-q-owner">
+              <legend>Are you the owner or a decision-maker of the business?</legend>
+              <div class="pills">
+                <label><input type="radio" name="owner" value="yes" required><span>Yes</span></label>
+                <label><input type="radio" name="owner" value="no"><span>No</span></label>
+              </div>
+            </fieldset>
+            <fieldset class="q" id="h-q-budget">
+              <legend>$2,495 one-time, paid only after you approve it. Does that fit your budget?</legend>
+              <div class="pills">
+                <label><input type="radio" name="budget" value="yes" required><span>Yes</span></label>
+                <label><input type="radio" name="budget" value="no"><span>No</span></label>
+              </div>
+            </fieldset>
+            <p class="field-error q-error" id="h-q-error" hidden>Please answer both questions.</p>
+            <div class="fields" id="h-fields">
+              <div class="grid-2">
+                <div class="field">
+                  <label for="h-name">Full name</label>
+                  <input id="h-name" name="name" type="text" autocomplete="name" required aria-describedby="h-e-name" placeholder="Jane Smith">
+                  <p class="field-error" id="h-e-name" hidden>Please enter your name.</p>
+                </div>
+                <div class="field">
+                  <label for="h-phone">Phone</label>
+                  <input id="h-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" required aria-describedby="h-e-phone" placeholder="(555) 123-4567">
+                  <p class="field-error" id="h-e-phone" hidden>Please enter a phone number with area code.</p>
+                </div>
+                <div class="field">
+                  <label for="h-email">Email</label>
+                  <input id="h-email" name="email" type="email" autocomplete="email" required aria-describedby="h-e-email" placeholder="jane@yourbusiness.com">
+                  <p class="field-error" id="h-e-email" hidden>Please enter a valid email address.</p>
+                </div>
+                <div class="field">
+                  <label for="h-company">Business name</label>
+                  <input id="h-company" name="company" type="text" autocomplete="organization" required aria-describedby="h-e-company" placeholder="Smith Plumbing">
+                  <p class="field-error" id="h-e-company" hidden>Please enter your business name.</p>
+                </div>
+              </div>
+              <div class="hp" aria-hidden="true">
+                <label for="h-website">Leave this field empty</label>
+                <input id="h-website" name="company_website" type="text" tabindex="-1" autocomplete="off">
+              </div>
+              <div class="consent">
+                <input id="h-consent" name="consent" type="checkbox" required aria-describedby="h-e-consent">
+                <p class="consent-text"><label for="h-consent"><strong>I agree to calls and texts about my request.</strong> Digital Movement may call or text you at this number about your website request. Message and data rates may apply. Text STOP to stop. Consent is not required to buy anything.</label> <a href="privacy/">Privacy notice</a></p>
+                <p class="field-error" id="h-e-consent" hidden>Please tick the box so we may call you back.</p>
+              </div>
+              <button class="btn btn--primary btn--block" type="submit" id="h-submit"><span class="btn-label">Request my preview</span><span class="btn-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><use href="#i-arrow"/></svg></span></button>
+              <p class="reassure"><span class="lock" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><use href="#i-check"/></svg></span>Unlimited feedback rounds. You pay only when you approve.</p>
+              <p class="form-fine">No deposit, no card. You pay $2,495, one-time, only after you approve your website in writing.</p>
+            </div>
+            <div class="form-state" id="h-state-no" hidden tabindex="-1">
+              <h3>Thanks for checking</h3>
+              <p>This offer is for business owners and decision-makers, at $2,495 paid after approval. If that changes, you're welcome back anytime.</p>
+              <button class="link-btn" type="button" id="h-restart">Change my answers</button>
+            </div>
+            <p class="form-alert" id="h-alert" role="alert" hidden></p>
+            <noscript><p class="form-alert">This form needs JavaScript. Call <a href="tel:+447865064463">+44 7865 064463</a> or email <a href="mailto:office@digitalmovement.uk">office@digitalmovement.uk</a>.</p></noscript>
+          </form>
+          <div class="form-state form-done" id="h-state-done" hidden tabindex="-1">
+            <span class="ok-ic" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><use href="#i-check"/></svg></span>
+            <h3>Thanks! We'll call you within 1 business day</h3>
+            <p>We'll call or text you during US business hours to talk through your services, pages and timing. This request doesn't order a website or cost anything.</p>
+          </div>
+        </div>
+
+        <div class="hero-proof rv">
+          <ul class="hero-checks" aria-label="Our guarantees">
+            <li><span class="hc-ic" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><use href="#i-check"/></svg></span><span><strong>Unlimited feedback rounds</strong> on the agreed pages, until you approve</span></li>
+            <li><span class="hc-ic" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><use href="#i-check"/></svg></span><span><strong>Payment only when you approve.</strong> No approval, no invoice</span></li>
+          </ul>
+          <div class="hero-awards">
+            <a class="dmt-badge" href="https://www.digitalreference.co/insights/marketing-professionals/best-digital-marketing-agencies-companies-in-australia" target="_blank" rel="noopener" aria-label="Digital Movement, listed 3rd of 10 by Digital Reference, September 2026. Opens the list.">
+              <span class="dmt-badge-in"><span class="db-org">Digital Reference</span><span class="db-year">2026</span><span class="db-title">Listed 3rd of&nbsp;10</span><span class="db-sub">Digital Movement · September 2026</span></span>
+            </a>
+            <a class="g-rating-card" href="https://www.google.com/maps/place/?q=place_id:ChIJuTdQJjZp1moR_AEpV_uVCp8" target="_blank" rel="noopener" aria-label="Google rating 5.0 out of 5 from 100 reviews. Opens the Digital Movement profile on Google Maps.">
+              <span class="grc-g" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><use href="#i-g"/></svg></span>
+              <span class="grc-body"><span class="grc-label">Google rating</span><span class="grc-score"><b>5.0</b><svg class="grc-stars" viewBox="0 0 120 24" aria-hidden="true" focusable="false"><use href="#i-stars5"/></svg></span><span class="grc-count">Based on 100 reviews</span></span>
+            </a>
+          </div>
+          <div class="hero-byline">
+            <img src="assets/raoul-160-v1.2.webp" alt="Raoul Müller" width="52" height="52">
+            <p><strong>Raoul Müller</strong>, director of Digital Movement Marketing Ltd, calls you back within 1 business day, during US business hours.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="statement" aria-labelledby="st-title">
+    <div class="wrap">
+      <div class="st-grid">
+        <h2 class="st-head rv lit" id="st-title"><span><i><span class="w">Facts</span> <span class="w">you</span> <span class="w">can</span></i></span> <span><i class="accent"><span class="w">check.</span></i></span></h2>
+        <ul class="awards rv awards--stats">
+          <li>
+            <a class="awards-link" href="https://capedigital.com.au/post/top-10-digital-marketing-agency-in-australia" target="_blank" rel="noopener">
+              <p class="aw-stat"><span>Top 10</span></p>
+              <h3 class="aw-title">Cape Digital: Top 10 agencies in Australia, 2026</h3>
+              <p class="aw-meta">Digital Movement, 7th of 10</p>
+            </a>
+          </li>
+          <li>
+            <a class="awards-link" href="https://www.digitalreference.co/insights/marketing-professionals/best-digital-marketing-agencies-companies-in-australia" target="_blank" rel="noopener">
+              <p class="aw-stat"><span>Listed</span></p>
+              <h3 class="aw-title">Digital Reference: agencies in Australia, 2026</h3>
+              <p class="aw-meta">Digital Movement, 3rd of 10</p>
+            </a>
+          </li>
+          <li>
+            <a class="awards-link" href="https://www.google.com/maps/place/?q=place_id:ChIJuTdQJjZp1moR_AEpV_uVCp8" target="_blank" rel="noopener">
+              <p class="aw-stat"><span>5.0</span><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-star"/></svg></p>
+              <h3 class="aw-title">Google rating from 100 reviews, as of Oct. 19, 2026</h3>
+              <p class="aw-meta">Digital Movement on Google</p>
+            </a>
+          </li>
+          <li>
+            <a class="awards-link" href="#terms">
+              <p class="aw-stat"><span>$0</span></p>
+              <h3 class="aw-title">No deposit, no card. You pay only after you approve.</h3>
+              <p class="aw-meta">Offer by Digital Movement Marketing Ltd</p>
+            </a>
+          </li>
         </ul>
-        <div class="byline">
-          <img src="assets/raoul-160-v1.2.webp" alt="Raoul Müller" width="56" height="56">
-          <p><strong>Raoul Müller</strong>, director of Digital Movement Marketing Ltd, calls you back within 1 business day, during US business hours.</p>
-        </div>
-      </div>
-
-      <div class="form-card" id="request">
-        <form id="lead-form" novalidate aria-labelledby="form-title" data-endpoint="https://api.hsforms.com/submissions/v3/integration/submit/149472643/441b02d8-30a7-4d1b-91f3-981f87f298b0">
-          <div class="form-head">
-            <h2 id="form-title">Request your preview</h2>
-          </div>
-
-          <fieldset class="q" id="q-owner">
-            <legend>Are you the owner or a decision-maker of the business?</legend>
-            <div class="pills">
-              <label><input type="radio" name="owner" value="yes" required><span>Yes</span></label>
-              <label><input type="radio" name="owner" value="no"><span>No</span></label>
-            </div>
-          </fieldset>
-          <fieldset class="q" id="q-budget">
-            <legend>$2,495 one-time, paid only after you approve it. Does that fit your budget?</legend>
-            <div class="pills">
-              <label><input type="radio" name="budget" value="yes" required><span>Yes</span></label>
-              <label><input type="radio" name="budget" value="no"><span>No</span></label>
-            </div>
-          </fieldset>
-          <p class="field-error q-error" id="q-error" hidden>Please answer both questions.</p>
-
-          <div class="contact-fields" id="contact-fields">
-            <div class="grid-2">
-              <div class="field">
-                <label for="f-name">Full name</label>
-                <input id="f-name" name="name" type="text" autocomplete="name" required aria-describedby="e-name">
-                <p class="field-error" id="e-name" hidden>Please enter your name.</p>
-              </div>
-              <div class="field">
-                <label for="f-phone">Phone</label>
-                <input id="f-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" required aria-describedby="e-phone">
-                <p class="field-error" id="e-phone" hidden>Please enter a phone number with area code.</p>
-              </div>
-              <div class="field">
-                <label for="f-email">Email</label>
-                <input id="f-email" name="email" type="email" autocomplete="email" required aria-describedby="e-email">
-                <p class="field-error" id="e-email" hidden>Please enter a valid email address.</p>
-              </div>
-              <div class="field">
-                <label for="f-company">Business name</label>
-                <input id="f-company" name="company" type="text" autocomplete="organization" required aria-describedby="e-company">
-                <p class="field-error" id="e-company" hidden>Please enter your business name.</p>
-              </div>
-            </div>
-            <div class="hp" aria-hidden="true">
-              <label for="f-website">Leave this field empty</label>
-              <input id="f-website" name="company_website" type="text" tabindex="-1" autocomplete="off">
-            </div>
-            <div class="consent">
-              <input id="f-consent" name="consent" type="checkbox" required aria-describedby="e-consent">
-              <p class="consent-text"><label for="f-consent"><strong>I agree to calls and texts about my request.</strong> Digital Movement may call or text you at this number about your website request. Message and data rates may apply. Text STOP to stop. Consent is not required to buy anything.</label> <a href="privacy/">Privacy notice</a></p>
-              <p class="field-error" id="e-consent" hidden>Please tick the box so we may call you back.</p>
-            </div>
-            <button class="btn btn-block" type="submit" id="submit-btn">Request my preview</button>
-            <p class="reassure"><span class="lock" aria-hidden="true"></span>Unlimited feedback rounds. You pay only when you approve.</p>
-          </div>
-
-          <div class="form-state" id="state-no" hidden tabindex="-1">
-            <h3>Thanks for checking</h3>
-            <p>This offer is for business owners and decision-makers, at $2,495 paid after approval. If that changes, you're welcome back anytime.</p>
-            <button class="link-btn" type="button" id="restart">Change my answers</button>
-          </div>
-          <p class="form-alert" id="form-alert" role="alert" hidden></p>
-          <noscript><p class="form-alert">This form needs JavaScript. Call <a href="tel:+447865064463">+44 7865 064463</a> or email <a href="mailto:office@digitalmovement.uk">office@digitalmovement.uk</a>.</p></noscript>
-        </form>
-        <div class="form-state form-done" id="state-done" hidden tabindex="-1">
-          <h2>Thanks! We'll call you within 1 business day</h2>
-          <p>We'll call or text you during US business hours to talk through your services, pages and timing. This request doesn't order a website or cost anything.</p>
-        </div>
       </div>
     </div>
   </section>
 
-  <section class="trustbar" aria-label="Why it's safe to ask">
-    <div class="wrap trust-row">
-      <a class="trust" href="#reviews">
-        <span class="stars" aria-hidden="true">★★★★★</span>
-        <span><strong>5.0 on Google</strong> 100 reviews · Melbourne profile</span>
-      </a>
-      <div class="trust"><span class="t-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 11a8 8 0 0 0-14.3-4.9L4 8"/><path d="M4 3v5h5"/><path d="M4 13a8 8 0 0 0 14.3 4.9L20 16"/><path d="M20 21v-5h-5"/></svg></span><span><strong>Unlimited feedback rounds</strong> On the agreed pages, until you approve</span></div>
-      <div class="trust"><span class="t-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><span><strong>Payment only when you approve</strong> No approval, no invoice</span></div>
-      <div class="trust"><span class="t-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5.5" width="18" height="13" rx="2.5"/><path d="M3 10h18"/><path d="M4 4l16 16"/></svg></span><span><strong>No deposit, no card</strong> Nothing to pay for the preview</span></div>
-    </div>
-  </section>
-
-  <section class="section section-alt" id="how" aria-labelledby="how-title">
+  <section class="vals cw" id="offer" aria-labelledby="offer-title">
     <div class="wrap">
-      <p class="kicker">How it works</p>
-      <h2 id="how-title">How does the pay-after preview work?</h2>
-      <p class="intro">Four steps. You decide before you pay.</p>
-      <ol class="steps">
-        <li>
-          <h3>Request your preview</h3>
-          <p>Answer two quick questions and leave your number in the form on this page (or in our Facebook or Instagram ad). We call you within 1 business day, during US business hours, to talk through your services, pages and timing.</p>
-        </li>
-        <li>
-          <h3>We build your website first</h3>
-          <p>Up to seven agreed pages, with writing, mobile layouts and a contact form. We build it privately. Nothing goes live yet.</p>
-        </li>
-        <li>
-          <h3>Review and ask for changes</h3>
-          <p>You get a private link to your finished website. Ask for changes as often as you like, on the agreed pages, until you're happy with it.</p>
-        </li>
-        <li>
-          <h3>Approve, then pay</h3>
-          <p>You pay only after you approve it in writing: then we send one invoice for $2,495. After payment, your website goes live and we hand it over to you. No approval, no invoice.</p>
-        </li>
-      </ol>
-      <div class="after-steps">
-        <p>No deposit and no card for the preview.</p>
-        <a class="btn" href="#request">Request your preview</a>
+      <div class="sec-head"><h2 class="lit" id="offer-title"><span class="w">We</span> <span class="w">build</span> <span class="w">first.</span> <span class="w">You</span> <span class="w">pay</span> <span class="w">only</span> <span class="outline"><span class="w">when</span> <span class="w">you</span> <span class="w">approve.</span></span></h2></div>
+      <div class="cw-copy rv">
+        <p>We build your WordPress website first. You review every agreed page in a private preview and ask for changes as often as you like. When you approve it in writing (an email is enough), you get one invoice for $2,495. No deposit. No card.</p>
+        <p>No approval, no invoice. Not replying is not approval. Nothing goes live until you approve and pay. Then we hand the website over, transferring the custom work we own and can assign, with a license inventory, so it can move to another provider.</p>
+        <p>The offer is made and invoiced by Digital Movement Marketing Ltd, a UK company. Its directors, Raoul Müller and Martey Quaye, are identity-verified at Companies House.</p>
       </div>
+      <p class="cw-cta rv"><a class="btn btn--primary" href="#request">Request your preview<span class="btn-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><use href="#i-arrow"/></svg></span></a></p>
     </div>
   </section>
 
-  <section class="section dark work" id="work" aria-labelledby="work-title">
+  <section class="reviews" id="reviews" aria-labelledby="rev-title">
     <div class="wrap">
-      <p class="kicker">Our work</p>
-      <h2 id="work-title">Which websites have we built?</h2>
-      <p class="intro">Live websites from our team. Open any of them to see it working on your own phone.</p>
-      <div class="projects">
-        <article class="project">
-          <div class="device">
-            <div class="browser"><div class="bar" aria-hidden="true"><i></i><i></i><i></i><span>addressbali.com</span></div><img src="assets/work/addressbali-desktop-v1.2.webp" alt="Address Bali website on a desktop screen" width="1200" height="750" loading="lazy" decoding="async"></div>
-            <div class="phone"><img src="assets/work/addressbali-mobile-v1.2.webp" alt="Address Bali website on a phone" width="360" height="779" loading="lazy" decoding="async"></div>
-          </div>
-          <div class="project-body">
-            <h3>Address Bali</h3>
-            <p class="meta">Beachfront residences · Canggu, Bali</p>
-            <p>Website design and build: residence, amenities, location, investor and broker pages, brochure download and lead forms.</p>
-            <a class="ext" href="https://addressbali.com/" target="_blank" rel="noopener">Visit addressbali.com</a>
-          </div>
-        </article>
-        <article class="project">
-          <div class="device">
-            <div class="browser"><div class="bar" aria-hidden="true"><i></i><i></i><i></i><span>azuralivingbali.com</span></div><img src="assets/work/azura-desktop-v1.2.webp" alt="Azura Living Bali website on a desktop screen" width="1200" height="750" loading="lazy" decoding="async"></div>
-            <div class="phone"><img src="assets/work/azura-mobile-v1.2.webp" alt="Azura Living Bali website on a phone" width="360" height="779" loading="lazy" decoding="async"></div>
-          </div>
-          <div class="project-body">
-            <h3>Azura Living Bali</h3>
-            <p class="meta">Villa investment project · Tabanan, Bali</p>
-            <p>Website, hosting and search setup for twelve boutique villas: ROI calculator, brochure download and discovery-call booking.</p>
-            <a class="ext" href="https://azuralivingbali.com/" target="_blank" rel="noopener">Visit azuralivingbali.com</a>
-          </div>
-        </article>
-        <article class="project">
-          <div class="device">
-            <div class="browser"><div class="bar" aria-hidden="true"><i></i><i></i><i></i><span>cex.koeln</span></div><img src="assets/work/cex-desktop-v1.2.webp" alt="CEx website on a desktop screen" width="1200" height="750" loading="lazy" decoding="async"></div>
-            <div class="phone"><img src="assets/work/cex-mobile-v1.2.webp" alt="CEx website on a phone" width="360" height="779" loading="lazy" decoding="async"></div>
-          </div>
-          <div class="project-body">
-            <h3>CEx</h3>
-            <p class="meta">Management consulting · Cologne, Germany</p>
-            <p>WordPress website in German: service pages, local pages for the Cologne area, a blog, and a contact form on every page.</p>
-            <a class="ext" href="https://cex.koeln/" target="_blank" rel="noopener">Visit cex.koeln</a>
-          </div>
-        </article>
-        <article class="project">
-          <div class="device">
-            <div class="browser"><div class="bar" aria-hidden="true"><i></i><i></i><i></i><span>cunos.co.uk</span></div><img src="assets/work/cunos-desktop-v1.2.webp" alt="Cunos Consulting website on a desktop screen" width="1200" height="750" loading="lazy" decoding="async"></div>
-            <div class="phone"><img src="assets/work/cunos-mobile-v1.2.webp" alt="Cunos Consulting website on a phone" width="360" height="779" loading="lazy" decoding="async"></div>
-          </div>
-          <div class="project-body">
-            <h3>Cunos Consulting</h3>
-            <p class="meta">Finance consulting · London, UK</p>
-            <p>Website for senior finance support: homepage, three service pages and a 30-second self-assessment.</p>
-            <a class="ext" href="https://cunos.co.uk/" target="_blank" rel="noopener">Visit cunos.co.uk</a>
-          </div>
-        </article>
+      <div class="sec-head">
+        <h2 class="lit" id="rev-title"><span class="w">What</span> <span class="w">our</span> <span class="outline"><span class="w">clients</span> <span class="w">say.</span></span></h2>
+        <a class="rv-badge" href="https://www.google.com/maps/place/?q=place_id:ChIJuTdQJjZp1moR_AEpV_uVCp8" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-g"/></svg><b>5.0</b> · 100 Google reviews</a>
+        <p class="sec-sub disclose rv">These reviews are on the Google profile of Digital Movement. Each quote is copied word for word from the review, "…" marks where we shortened it, and each review describes that client's own experience. Rating and review count read on Google on October 19, 2026. The US offer is made by our UK company, Digital Movement Marketing Ltd.</p>
       </div>
-    </div>
-  </section>
-
-  <section class="section" id="reviews" aria-labelledby="reviews-title">
-    <div class="wrap">
-      <div class="reviews-head">
-        <div>
-          <p class="kicker">Reviews</p>
-          <h2 id="reviews-title">What do clients say on Google?</h2>
-        </div>
-        <a class="rating-card" href="https://www.google.com/maps/place/?q=place_id:ChIJuTdQJjZp1moR_AEpV_uVCp8" target="_blank" rel="noopener">
-          <span class="rating-num">5.0</span>
-          <span class="rating-side"><span class="stars" aria-hidden="true">★★★★★</span><span>100 reviews on Google</span><span class="small">Read them on Google</span></span>
-        </a>
-      </div>
-      <p class="disclose">These reviews are on the Google profile of Digital Movement in Melbourne, Australia, where our agency started. The US offer is made by our UK company, Digital Movement Marketing Ltd. Each quote is copied word for word from the review, "…" marks where we shortened it, and each review describes that client's own experience. Rating and review count read on Google on October 19, 2026.</p>
-      <div class="reviews">
-        <figure class="review">
-          <span class="stars" role="img" aria-label="5 out of 5 stars">★★★★★</span>
+      <ul class="rv-grid" id="rvGrid">
+        <li class="rv-card rv"><figure class="review"><div class="rv-card-top"><span class="rv-stars" role="img" aria-label="5 out of 5 stars"><svg viewBox="0 0 120 24" aria-hidden="true" focusable="false"><use href="#i-stars5"/></svg></span><span class="rv-g" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><use href="#i-g"/></svg></span></div>
           <blockquote>Digital Movement have been amazing to work with. Dean and the team built me a great website … The team is easy to talk to, quick to respond and they explain everything in plain English. …</blockquote>
-          <figcaption><strong>Beth Sorensen</strong> <span>Google review · Aug 2025 · <a href="#cite-1">[1]</a></span></figcaption>
-        </figure>
-        <figure class="review">
-          <span class="stars" role="img" aria-label="5 out of 5 stars">★★★★★</span>
+          <figcaption><strong>Beth Sorensen</strong><span>Google review · Aug 2025 · <a href="#cite-1">[1]</a></span></figcaption></figure></li>
+        <li class="rv-card rv"><figure class="review"><div class="rv-card-top"><span class="rv-stars" role="img" aria-label="5 out of 5 stars"><svg viewBox="0 0 120 24" aria-hidden="true" focusable="false"><use href="#i-stars5"/></svg></span><span class="rv-g" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><use href="#i-g"/></svg></span></div>
           <blockquote>Stuart, Dean and the crew have been excellent in creating a complete redesign of a new website for my business … They have always been very responsive in communication and have been great to work with. Highly recommend!</blockquote>
-          <figcaption><strong>Matthew Kang</strong> <span>Google review · Jul 2025 · <a href="#cite-2">[2]</a></span></figcaption>
-        </figure>
-        <figure class="review">
-          <span class="stars" role="img" aria-label="5 out of 5 stars">★★★★★</span>
+          <figcaption><strong>Matthew Kang</strong><span>Google review · Jul 2025 · <a href="#cite-2">[2]</a></span></figcaption></figure></li>
+        <li class="rv-card rv"><figure class="review"><div class="rv-card-top"><span class="rv-stars" role="img" aria-label="5 out of 5 stars"><svg viewBox="0 0 120 24" aria-hidden="true" focusable="false"><use href="#i-stars5"/></svg></span><span class="rv-g" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><use href="#i-g"/></svg></span></div>
           <blockquote>Stuart and the team at Digital Movement have been exceptional. … their communication is prompt, updates are clear, and their understanding of my goals is spot on. They don't just build websites—they bring your vision to life. …</blockquote>
-          <figcaption><strong>Eddie Hanger</strong> <span>Google review · May 2025 · <a href="#cite-3">[3]</a></span></figcaption>
-        </figure>
-        <figure class="review">
-          <span class="stars" role="img" aria-label="5 out of 5 stars">★★★★★</span>
+          <figcaption><strong>Eddie Hanger</strong><span>Google review · May 2025 · <a href="#cite-3">[3]</a></span></figcaption></figure></li>
+        <li class="rv-card rv"><figure class="review"><div class="rv-card-top"><span class="rv-stars" role="img" aria-label="5 out of 5 stars"><svg viewBox="0 0 120 24" aria-hidden="true" focusable="false"><use href="#i-stars5"/></svg></span><span class="rv-g" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><use href="#i-g"/></svg></span></div>
           <blockquote>The team at Digital Movement has been absolutely fantastic in creating my shiny new website for Willow Branch Photography, and I couldn't be happier with the redesign and development! They kept me updated along the way and obliged my requests for features and changes, and overall I've had a wonderful experience with them. …</blockquote>
-          <figcaption><strong>Malin Burnand</strong> <span>Google review · Oct 2024 · <a href="#cite-4">[4]</a></span></figcaption>
-        </figure>
-        <figure class="review">
-          <span class="stars" role="img" aria-label="5 out of 5 stars">★★★★★</span>
+          <figcaption><strong>Malin Burnand</strong><span>Google review · Oct 2024 · <a href="#cite-4">[4]</a></span></figcaption></figure></li>
+        <li class="rv-card rv"><figure class="review"><div class="rv-card-top"><span class="rv-stars" role="img" aria-label="5 out of 5 stars"><svg viewBox="0 0 120 24" aria-hidden="true" focusable="false"><use href="#i-stars5"/></svg></span><span class="rv-g" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><use href="#i-g"/></svg></span></div>
           <blockquote>Digital Movement built my new website designed with SEO intent. I found the team to be highly supportive to adopt my suggestions, I was pleased to find the invisaged look of the overall image I was seeking was captured from the very first draft. …</blockquote>
-          <figcaption><strong>Brent Thomas</strong> <span>Google review · Feb 2023 · <a href="#cite-5">[5]</a></span></figcaption>
-        </figure>
-        <figure class="review">
-          <span class="stars" role="img" aria-label="5 out of 5 stars">★★★★★</span>
+          <figcaption><strong>Brent Thomas</strong><span>Google review · Feb 2023 · <a href="#cite-5">[5]</a></span></figcaption></figure></li>
+        <li class="rv-card rv"><figure class="review"><div class="rv-card-top"><span class="rv-stars" role="img" aria-label="5 out of 5 stars"><svg viewBox="0 0 120 24" aria-hidden="true" focusable="false"><use href="#i-stars5"/></svg></span><span class="rv-g" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><use href="#i-g"/></svg></span></div>
           <blockquote>Wanted to take a moment to thank the team for going the extra mile with my new website! It wasn't until I spoke with Ross that I understood why my previous Wix website wasn't bringing me in any work and already their new WordPress site is! …</blockquote>
-          <figcaption><strong>reece cox</strong> <span>Google review · Nov 2022 · <a href="#cite-6">[6]</a></span></figcaption>
-        </figure>
-        <figure class="review">
-          <span class="stars" role="img" aria-label="5 out of 5 stars">★★★★★</span>
+          <figcaption><strong>reece cox</strong><span>Google review · Nov 2022 · <a href="#cite-6">[6]</a></span></figcaption></figure></li>
+        <li class="rv-card rv"><figure class="review"><div class="rv-card-top"><span class="rv-stars" role="img" aria-label="5 out of 5 stars"><svg viewBox="0 0 120 24" aria-hidden="true" focusable="false"><use href="#i-stars5"/></svg></span><span class="rv-g" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><use href="#i-g"/></svg></span></div>
           <blockquote>I would like to say that the whole team at digital movement have done an outstanding job from start to finish designing and developing the website for my new business. The communication between us was fast, clear and the guys were able to suggest edits amongst other things that have given the website that modern, fresh and vibrant look I was after. …</blockquote>
-          <figcaption><strong>Aleksandra Thomas</strong> <span>Google review · Jun 2022 · <a href="#cite-7">[7]</a></span></figcaption>
-        </figure>
-        <figure class="review">
-          <span class="stars" role="img" aria-label="5 out of 5 stars">★★★★★</span>
+          <figcaption><strong>Aleksandra Thomas</strong><span>Google review · Jun 2022 · <a href="#cite-7">[7]</a></span></figcaption></figure></li>
+        <li class="rv-card rv"><figure class="review"><div class="rv-card-top"><span class="rv-stars" role="img" aria-label="5 out of 5 stars"><svg viewBox="0 0 120 24" aria-hidden="true" focusable="false"><use href="#i-stars5"/></svg></span><span class="rv-g" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><use href="#i-g"/></svg></span></div>
           <blockquote>We employed digital movement for an Ecommerce Website build and SEO. The Website is amazing, Martey was so patient with the back and forth that it took to fine tune exactly what we wanted. …</blockquote>
-          <figcaption><strong>Shellcove Skin</strong> <span>Google review · Apr 2022 · <a href="#cite-8">[8]</a></span></figcaption>
-        </figure>
+          <figcaption><strong>Shellcove Skin</strong><span>Google review · Apr 2022 · <a href="#cite-8">[8]</a></span></figcaption></figure></li>
+      </ul>
+      <div class="rv-more-wrap">
+        <button type="button" class="btn btn--primary btn--sm rv-more" aria-controls="rvGrid" aria-expanded="false" hidden>Read more reviews<span class="btn-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><use href="#i-arrow"/></svg></span></button>
+        <a class="btn btn--primary btn--sm rv-google" href="https://www.google.com/maps/place/?q=place_id:ChIJuTdQJjZp1moR_AEpV_uVCp8" target="_blank" rel="noopener">Read more reviews on Google<span class="btn-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><use href="#i-arrow"/></svg></span></a>
       </div>
 
       <div class="citations" id="citations">
@@ -333,168 +351,406 @@
     </div>
   </section>
 
-  <section class="section section-alt" id="about" aria-labelledby="about-title">
+  <section class="brands" id="brands" aria-labelledby="brands-title">
+    <div class="bx-head">
+      <p class="bx-eyebrow"><span class="bx-dot" aria-hidden="true"></span>Client brands</p>
+      <h2 class="bx-title lit" id="brands-title"><span class="w">Brands</span> <span class="w">who</span> <span class="outline"><span class="w">trust</span> <span class="w">us.</span></span></h2>
+      <p class="bx-sub">Trade businesses our team has worked for: plumbers, electricians, roofers and more.</p>
+    </div>
+    <div class="bx-rows">
+      <div class="bx-row"><ul class="bx-track" style="--bx-dur:90s"><li class="bx-tile bx-tile--dark"><img src="assets/brands/arrow-turf.png" alt="Arrow Turf" width="168" height="128" loading="lazy" decoding="async"></li><li class="bx-tile bx-tile--dark"><img src="assets/brands/mw-homes.png" alt="MW Homes" width="285" height="35" loading="lazy" decoding="async"></li><li class="bx-tile"><img src="assets/brands/sc-garage-doors.png" alt="SC Garage Doors" width="267" height="46" loading="lazy" decoding="async"></li><li class="bx-tile"><img src="assets/brands/williams-excavations.png" alt="Williams Excavations" width="300" height="68" loading="lazy" decoding="async"></li><li class="bx-tile"><img src="assets/brands/tas-tow-recovery.png" alt="Tas Tow Recovery" width="300" height="90" loading="lazy" decoding="async"></li><li class="bx-tile"><img src="assets/brands/household-appliance-repairs.png" alt="Household Appliance Repairs" width="300" height="82" loading="lazy" decoding="async"></li><li class="bx-tile"><img src="assets/brands/metro-household-appliance-repairs.png" alt="Metro Household Appliance Repairs" width="300" height="80" loading="lazy" decoding="async"></li><li class="bx-tile bx-tile--dark"><img src="assets/brands/njb-electrical-services.png" alt="NJB Electrical Services" width="300" height="64" loading="lazy" decoding="async"></li><li class="bx-tile bx-tile--dark"><img src="assets/brands/vv-glass.png" alt="VV Glass" width="114" height="117" loading="lazy" decoding="async"></li><li class="bx-tile bx-tile--dark"><img src="assets/brands/alz-carpentry.png" alt="ALZ Carpentry" width="300" height="112" loading="lazy" decoding="async"></li><li class="bx-tile bx-tile--dark"><img src="assets/brands/green-army-services.png" alt="Green Army Services" width="300" height="68" loading="lazy" decoding="async"></li><li class="bx-tile"><img src="assets/brands/cq-pool-aquatic-services.webp" alt="CQ Pool &amp; Aquatic Services" width="128" height="117" loading="lazy" decoding="async"></li><li class="bx-tile"><img src="assets/brands/vip-reblocking.png" alt="VIP Reblocking" width="300" height="172" loading="lazy" decoding="async"></li><li class="bx-tile"><img src="assets/brands/monkey-transfer.png" alt="Monkey Transfer" width="300" height="95" loading="lazy" decoding="async"></li><li class="bx-tile"><img src="assets/brands/building-property-inspections-maintenance.png" alt="Building Property Inspections &amp; Maintenance" width="270" height="150" loading="lazy" decoding="async"></li><li class="bx-tile"><img src="assets/brands/ultra-finish-roofing.png" alt="Ultra Finish Roofing" width="300" height="133" loading="lazy" decoding="async"></li><li class="bx-tile bx-tile--dark"><img src="assets/brands/hustle-installations.png" alt="Hustle Installations" width="242" height="223" loading="lazy" decoding="async"></li><li class="bx-tile"><img src="assets/brands/diamond-blinds.png" alt="Diamond Blinds" width="300" height="66" loading="lazy" decoding="async"></li><li class="bx-tile"><img src="assets/brands/sydney-plumb-jobs.png" alt="Sydney Plumb Jobs" width="300" height="149" loading="lazy" decoding="async"></li><li class="bx-tile"><img src="assets/brands/ocean-beach-blinds.png" alt="Ocean Beach Blinds" width="300" height="122" loading="lazy" decoding="async"></li><li class="bx-tile bx-tile--dark" aria-hidden="true"><img src="assets/brands/arrow-turf.png" alt="" width="168" height="128" loading="lazy" decoding="async"></li><li class="bx-tile bx-tile--dark" aria-hidden="true"><img src="assets/brands/mw-homes.png" alt="" width="285" height="35" loading="lazy" decoding="async"></li><li class="bx-tile" aria-hidden="true"><img src="assets/brands/sc-garage-doors.png" alt="" width="267" height="46" loading="lazy" decoding="async"></li><li class="bx-tile" aria-hidden="true"><img src="assets/brands/williams-excavations.png" alt="" width="300" height="68" loading="lazy" decoding="async"></li><li class="bx-tile" aria-hidden="true"><img src="assets/brands/tas-tow-recovery.png" alt="" width="300" height="90" loading="lazy" decoding="async"></li><li class="bx-tile" aria-hidden="true"><img src="assets/brands/household-appliance-repairs.png" alt="" width="300" height="82" loading="lazy" decoding="async"></li><li class="bx-tile" aria-hidden="true"><img src="assets/brands/metro-household-appliance-repairs.png" alt="" width="300" height="80" loading="lazy" decoding="async"></li><li class="bx-tile bx-tile--dark" aria-hidden="true"><img src="assets/brands/njb-electrical-services.png" alt="" width="300" height="64" loading="lazy" decoding="async"></li><li class="bx-tile bx-tile--dark" aria-hidden="true"><img src="assets/brands/vv-glass.png" alt="" width="114" height="117" loading="lazy" decoding="async"></li><li class="bx-tile bx-tile--dark" aria-hidden="true"><img src="assets/brands/alz-carpentry.png" alt="" width="300" height="112" loading="lazy" decoding="async"></li><li class="bx-tile bx-tile--dark" aria-hidden="true"><img src="assets/brands/green-army-services.png" alt="" width="300" height="68" loading="lazy" decoding="async"></li><li class="bx-tile" aria-hidden="true"><img src="assets/brands/cq-pool-aquatic-services.webp" alt="" width="128" height="117" loading="lazy" decoding="async"></li><li class="bx-tile" aria-hidden="true"><img src="assets/brands/vip-reblocking.png" alt="" width="300" height="172" loading="lazy" decoding="async"></li><li class="bx-tile" aria-hidden="true"><img src="assets/brands/monkey-transfer.png" alt="" width="300" height="95" loading="lazy" decoding="async"></li><li class="bx-tile" aria-hidden="true"><img src="assets/brands/building-property-inspections-maintenance.png" alt="" width="270" height="150" loading="lazy" decoding="async"></li><li class="bx-tile" aria-hidden="true"><img src="assets/brands/ultra-finish-roofing.png" alt="" width="300" height="133" loading="lazy" decoding="async"></li><li class="bx-tile bx-tile--dark" aria-hidden="true"><img src="assets/brands/hustle-installations.png" alt="" width="242" height="223" loading="lazy" decoding="async"></li><li class="bx-tile" aria-hidden="true"><img src="assets/brands/diamond-blinds.png" alt="" width="300" height="66" loading="lazy" decoding="async"></li><li class="bx-tile" aria-hidden="true"><img src="assets/brands/sydney-plumb-jobs.png" alt="" width="300" height="149" loading="lazy" decoding="async"></li><li class="bx-tile" aria-hidden="true"><img src="assets/brands/ocean-beach-blinds.png" alt="" width="300" height="122" loading="lazy" decoding="async"></li></ul></div>
+      <div class="bx-row is-reverse"><ul class="bx-track" style="--bx-dur:85s"><li class="bx-tile"><img src="assets/brands/irs-group.png" alt="IRS Group" width="145" height="127" loading="lazy" decoding="async"></li><li class="bx-tile"><img src="assets/brands/power-motor-electrical.png" alt="Power Motor Electrical" width="263" height="92" loading="lazy" decoding="async"></li><li class="bx-tile bx-tile--dark"><img src="assets/brands/low-price-rubbish-removals.png" alt="Low Price Rubbish Removals" width="300" height="67" loading="lazy" decoding="async"></li><li class="bx-tile"><img src="assets/brands/skip-2-u.png" alt="Skip 2 U" width="217" height="118" loading="lazy" decoding="async"></li><li class="bx-tile bx-tile--dark"><img src="assets/brands/exclusive-refurb-solutions.png" alt="Exclusive Refurb Solutions" width="300" height="71" loading="lazy" decoding="async"></li><li class="bx-tile"><img src="assets/brands/saltvu-builders.png" alt="Saltvu Builders" width="300" height="80" loading="lazy" decoding="async"></li><li class="bx-tile bx-tile--dark"><img src="assets/brands/mulching-services.png" alt="Mulching Services" width="300" height="20" loading="lazy" decoding="async"></li><li class="bx-tile"><img src="assets/brands/4-perfect-cleaning.png" alt="4 Perfect Cleaning" width="300" height="108" loading="lazy" decoding="async"></li><li class="bx-tile bx-tile--dark"><img src="assets/brands/custom-44.png" alt="Custom 44" width="240" height="90" loading="lazy" decoding="async"></li><li class="bx-tile bx-tile--dark"><img src="assets/brands/bseds.png" alt="BSEDS" width="242" height="63" loading="lazy" decoding="async"></li><li class="bx-tile bx-tile--dark"><img src="assets/brands/build-marque.png" alt="Build Marque" width="300" height="58" loading="lazy" decoding="async"></li><li class="bx-tile"><img src="assets/brands/ct-auto-parts.png" alt="CT Auto Parts" width="233" height="55" loading="lazy" decoding="async"></li><li class="bx-tile bx-tile--dark"><img src="assets/brands/fyshwick-appliance-repairs.png" alt="Fyshwick Appliance Repairs" width="204" height="57" loading="lazy" decoding="async"></li><li class="bx-tile"><img src="assets/brands/ck-plumbing.png" alt="CK Plumbing" width="300" height="95" loading="lazy" decoding="async"></li><li class="bx-tile"><img src="assets/brands/north-tas-concrete.png" alt="North Tas Concrete" width="300" height="60" loading="lazy" decoding="async"></li><li class="bx-tile bx-tile--dark"><img src="assets/brands/precision-painting-aus.webp" alt="Precision Painting Aus" width="300" height="179" loading="lazy" decoding="async"></li><li class="bx-tile bx-tile--dark"><img src="assets/brands/narrowtech.png" alt="Narrowtech" width="300" height="141" loading="lazy" decoding="async"></li><li class="bx-tile"><img src="assets/brands/elite-renewables.png" alt="Elite Renewables" width="138" height="146" loading="lazy" decoding="async"></li><li class="bx-tile"><img src="assets/brands/monarc-developments.webp" alt="Monarc Developments" width="300" height="240" loading="lazy" decoding="async"></li><li class="bx-tile" aria-hidden="true"><img src="assets/brands/irs-group.png" alt="" width="145" height="127" loading="lazy" decoding="async"></li><li class="bx-tile" aria-hidden="true"><img src="assets/brands/power-motor-electrical.png" alt="" width="263" height="92" loading="lazy" decoding="async"></li><li class="bx-tile bx-tile--dark" aria-hidden="true"><img src="assets/brands/low-price-rubbish-removals.png" alt="" width="300" height="67" loading="lazy" decoding="async"></li><li class="bx-tile" aria-hidden="true"><img src="assets/brands/skip-2-u.png" alt="" width="217" height="118" loading="lazy" decoding="async"></li><li class="bx-tile bx-tile--dark" aria-hidden="true"><img src="assets/brands/exclusive-refurb-solutions.png" alt="" width="300" height="71" loading="lazy" decoding="async"></li><li class="bx-tile" aria-hidden="true"><img src="assets/brands/saltvu-builders.png" alt="" width="300" height="80" loading="lazy" decoding="async"></li><li class="bx-tile bx-tile--dark" aria-hidden="true"><img src="assets/brands/mulching-services.png" alt="" width="300" height="20" loading="lazy" decoding="async"></li><li class="bx-tile" aria-hidden="true"><img src="assets/brands/4-perfect-cleaning.png" alt="" width="300" height="108" loading="lazy" decoding="async"></li><li class="bx-tile bx-tile--dark" aria-hidden="true"><img src="assets/brands/custom-44.png" alt="" width="240" height="90" loading="lazy" decoding="async"></li><li class="bx-tile bx-tile--dark" aria-hidden="true"><img src="assets/brands/bseds.png" alt="" width="242" height="63" loading="lazy" decoding="async"></li><li class="bx-tile bx-tile--dark" aria-hidden="true"><img src="assets/brands/build-marque.png" alt="" width="300" height="58" loading="lazy" decoding="async"></li><li class="bx-tile" aria-hidden="true"><img src="assets/brands/ct-auto-parts.png" alt="" width="233" height="55" loading="lazy" decoding="async"></li><li class="bx-tile bx-tile--dark" aria-hidden="true"><img src="assets/brands/fyshwick-appliance-repairs.png" alt="" width="204" height="57" loading="lazy" decoding="async"></li><li class="bx-tile" aria-hidden="true"><img src="assets/brands/ck-plumbing.png" alt="" width="300" height="95" loading="lazy" decoding="async"></li><li class="bx-tile" aria-hidden="true"><img src="assets/brands/north-tas-concrete.png" alt="" width="300" height="60" loading="lazy" decoding="async"></li><li class="bx-tile bx-tile--dark" aria-hidden="true"><img src="assets/brands/precision-painting-aus.webp" alt="" width="300" height="179" loading="lazy" decoding="async"></li><li class="bx-tile bx-tile--dark" aria-hidden="true"><img src="assets/brands/narrowtech.png" alt="" width="300" height="141" loading="lazy" decoding="async"></li><li class="bx-tile" aria-hidden="true"><img src="assets/brands/elite-renewables.png" alt="" width="138" height="146" loading="lazy" decoding="async"></li><li class="bx-tile" aria-hidden="true"><img src="assets/brands/monarc-developments.webp" alt="" width="300" height="240" loading="lazy" decoding="async"></li></ul></div>
+    </div>
+  </section>
+
+  <section class="vals hwhy" id="why" aria-labelledby="why-title">
     <div class="wrap">
-      <p class="kicker">Who we are</p>
-      <h2 id="about-title">Who will you be dealing with?</h2>
-      <p class="intro">A registered company with named directors. Each fact below links to its public record.</p>
+      <div class="sec-head"><p class="sec-eyebrow rv">Six reasons to ask for a preview</p><h2 class="lit" id="why-title"><span class="w">See</span> <span class="w">it</span> <span class="w">first.</span> <span class="outline"><span class="w">Then</span> <span class="w">decide.</span></span></h2></div>
+      <div class="vals-grid">
+        <article class="val rv"><p class="val-kicker">01</p><h3>No deposit. No card.</h3><p>You answer two quick questions and leave your phone number. There's no deposit, and the form never asks for a card.</p></article>
+        <article class="val rv"><p class="val-kicker">02</p><h3>Unlimited feedback rounds</h3><p>Ask for changes on the agreed pages as often as you like, until you approve. Nothing goes live while you review.</p></article>
+        <article class="val rv"><p class="val-kicker">03</p><h3>Payment only when you approve</h3><p>No approval, no invoice. Approve in writing (an email is enough), then you get one invoice for $2,495. Not replying is not approval.</p></article>
+        <article class="val rv"><p class="val-kicker">04</p><h3>One price: $2,495, one-time</h3><p>That covers up to seven pages, the writing, mobile layouts and a contact form. Hosting and domain aren't part of the price; we tell you the options and costs before anything is built.</p></article>
+        <article class="val rv"><p class="val-kicker">05</p><h3>Handed over to you</h3><p>Hosting and domain are set up in your own name. After payment, we transfer the custom work we own and can assign, with a license inventory, so you can switch providers.</p></article>
+        <article class="val rv"><p class="val-kicker">06</p><h3>A real company. A real person.</h3><p>Digital Movement Marketing Ltd is a UK company. Both directors are identity-verified at Companies House. Raoul Müller, a director, will call you back within 1 business day.</p></article>
+      </div>
+      <p class="hwhy-cta rv"><a class="btn btn--primary" href="#request">Request your preview<span class="btn-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><use href="#i-arrow"/></svg></span></a></p>
+    </div>
+  </section>
+
+  <section class="wwd" id="included" aria-labelledby="inc-title">
+    <div class="wrap">
+      <div class="sec-head"><p class="sec-eyebrow rv">What the $2,495 includes</p><h2 class="lit" id="inc-title"><span class="w">One</span> <span class="w">price.</span> <span class="outline"><span class="w">One</span> <span class="w">invoice.</span></span></h2><p class="sec-sub rv">One payment of $2,495, after you approve, covers everything below. Not included: online shops, booking systems, member areas, multi-language sites, ongoing marketing, hosting and domain.</p></div>
+    </div>
+    <div class="wwd-rail" id="wwdRail">
+      <div class="wwd-stick" id="wwdStick">
+        <div class="wwd-track" id="wwdTrack">
+          <article class="wd-card" style="--c1:#FFDC69;--c2:#FF7C46;--ct:#A8400B">
+            <img class="wd-photo" src="assets/showcase/mobile/mwhomes-mobile-v1.3.webp" alt="MW Homes website on a phone, built by our team" width="780" height="1170" loading="lazy" decoding="async">
+            <span class="wd-num" aria-hidden="true">01</span>
+            <span class="wd-tag">Pages</span>
+            <h3 class="wd-title">Up to seven pages</h3>
+            <p class="wd-lede">A ceiling, not a quota.</p>
+            <p class="wd-desc">On the first call we talk through which pages you need. If four pages cover your business, we build four, not seven. A contact form is included, too.</p>
+            <ul class="wd-points"><li>Pages agreed with you</li><li>Seven pages at most</li><li>Contact form included</li></ul>
+            <a class="wd-link" href="#how">How it works<span aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><use href="#i-arrow"/></svg></span></a>
+          </article>
+          <article class="wd-card" style="--c1:#FF7C46;--c2:#ED5BBF;--ct:#B83A0C">
+            <img class="wd-photo" src="assets/showcase/mobile/precisionpainting-mobile-v1.3.webp" alt="Precision Painting Aus website on a phone, built by our team" width="780" height="1170" loading="lazy" decoding="async">
+            <span class="wd-num" aria-hidden="true">02</span>
+            <span class="wd-tag">Writing</span>
+            <h3 class="wd-title">Writing included</h3>
+            <p class="wd-lede">Based on your services and facts.</p>
+            <p class="wd-desc">We write every agreed page for you, based on the services you offer and the facts you give us. You read it all in your private preview and ask for changes as often as you like.</p>
+            <ul class="wd-points"><li>Every agreed page</li><li>We do the writing</li><li>Change any line</li></ul>
+            <a class="wd-link" href="#reviews">Read the reviews<span aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><use href="#i-arrow"/></svg></span></a>
+          </article>
+          <article class="wd-card" style="--c1:#ED5BBF;--c2:#A378FF;--ct:#B4237A">
+            <img class="wd-photo" src="assets/showcase/mobile/narrowtech-mobile-v1.3.webp" alt="Narrowtech Cranes website on a phone, built by our team" width="780" height="1170" loading="lazy" decoding="async">
+            <span class="wd-num" aria-hidden="true">03</span>
+            <span class="wd-tag">Mobile</span>
+            <h3 class="wd-title">Mobile layouts</h3>
+            <p class="wd-lede">Laid out for phones and tablets.</p>
+            <p class="wd-desc">Every agreed page gets a mobile layout. In your private preview you can check it on a desktop, an iPhone, an Android phone and a tablet before you approve.</p>
+            <ul class="wd-points"><li>iPhone and Android</li><li>Tablets and desktop</li><li>Check before you pay</li></ul>
+            <a class="wd-link" href="#work">See the six live sites<span aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><use href="#i-arrow"/></svg></span></a>
+          </article>
+          <article class="wd-card" style="--c1:#A378FF;--c2:#7A4FC4;--ct:#6A3FB4">
+            <img class="wd-photo" src="assets/showcase/mobile/ultrafinish-mobile-v1.3.webp" alt="Ultra Finish Roofing website on a phone, built by our team" width="780" height="1170" loading="lazy" decoding="async">
+            <span class="wd-num" aria-hidden="true">04</span>
+            <span class="wd-tag">Preview</span>
+            <h3 class="wd-title">A private preview</h3>
+            <p class="wd-lede">Finished pages on a private link.</p>
+            <p class="wd-desc">You get a private link to a finished preview of every agreed page. Nothing is live yet. Ask for changes as often as you like, then approve in writing; an email is enough.</p>
+            <ul class="wd-points"><li>Private link only</li><li>Nothing goes live</li><li>Unlimited feedback</li></ul>
+            <a class="wd-link" href="#terms">Preview terms<span aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><use href="#i-arrow"/></svg></span></a>
+          </article>
+          <article class="wd-card" style="--c1:#FFDC69;--c2:#ED5BBF;--ct:#9A3412">
+            <img class="wd-photo" src="assets/showcase/mobile/buildmarque-mobile-v1.3.webp" alt="Buildmarque website on a phone, built by our team" width="780" height="1170" loading="lazy" decoding="async">
+            <span class="wd-num" aria-hidden="true">05</span>
+            <span class="wd-tag">Handover</span>
+            <h3 class="wd-title">The handover</h3>
+            <p class="wd-lede">Custom work transferred on payment.</p>
+            <p class="wd-desc">When you've paid, the website goes live and we hand it over. We transfer the custom work we own and can assign, with a license inventory, so your website can move to another provider. Hosting and domain are set up in your own name.</p>
+            <ul class="wd-points"><li>Live after payment</li><li>License inventory</li><li>Can switch providers</li></ul>
+            <a class="wd-link" href="#faq">Questions<span aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><use href="#i-arrow"/></svg></span></a>
+          </article>
+        </div>
+      </div>
+    </div>
+    <div class="wrap wwd-foot">
+      <p class="wwd-note rv">Phone screens: live websites our team built for clients.</p>
+      <div class="wwd-notes">
+        <div class="note-card rv"><h3>Not part of this offer</h3><p>Online shops, booking systems, member areas, websites in more than one language, and ongoing marketing. If you need one of these, it needs its own quote.</p></div>
+        <div class="note-card rv"><h3>Hosting and domain</h3><p>Your hosting and your domain are set up in your own name and are not part of the $2,495. We tell you the options and costs before anything is built.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="work" id="work" aria-labelledby="work-title">
+    <div class="wrap">
+      <div class="sec-head"><p class="sec-eyebrow rv">Live websites</p><h2 class="lit" id="work-title"><span class="w">A</span> <span class="w">showcase</span> <span class="w">of</span> <span class="outline"><span class="w">our</span> <span class="w">work.</span></span></h2><p class="sec-sub rv">Our team built these six websites for our clients, from home renovations and crane hire to building inspections. All six are live, so you can check them yourself.</p></div>
+      <div class="work-grid">
+        <a class="pj rv pj--site" href="https://www.mwhomes.com.au/" target="_blank" rel="noopener" aria-label="MW Homes, bathroom, kitchen and home renovations, Melbourne. Opens the live website." style="--p1:#0E9A4A;--p2:#5FC13B">
+          <div class="pj-panel"><div class="pj-browser"><div class="pj-bar" aria-hidden="true"><i></i><i></i><i></i><span>mwhomes.com.au</span><em class="pj-live">Live</em></div><div class="pj-view"><img class="pj-shot" src="assets/showcase/site-mwhomes-hero.webp" alt="MW Homes website home page" width="1550" height="1219" loading="lazy" decoding="async"></div></div></div>
+          <div class="pj-foot"><span class="pj-no" aria-hidden="true">01</span><span class="pj-name">MW Homes</span><span class="pj-line">Bathroom, kitchen and home renovations, Melbourne</span><span class="pj-visit">Visit site<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-ext"/></svg></span></div>
+        </a>
+        <a class="pj rv pj--site" href="https://www.narrowtech.com.au/" target="_blank" rel="noopener" aria-label="Narrowtech Cranes, mini crane hire, Central Coast, Newcastle and Sydney. Opens the live website." style="--p1:#D0122F;--p2:#6E0718">
+          <div class="pj-panel"><div class="pj-browser"><div class="pj-bar" aria-hidden="true"><i></i><i></i><i></i><span>narrowtech.com.au</span><em class="pj-live">Live</em></div><div class="pj-view"><img class="pj-shot" src="assets/showcase/site-narrowtech-hero.webp" alt="Narrowtech Cranes website home page" width="1550" height="1365" loading="lazy" decoding="async"></div></div></div>
+          <div class="pj-foot"><span class="pj-no" aria-hidden="true">02</span><span class="pj-name">Narrowtech Cranes</span><span class="pj-line">Mini crane hire, Central Coast, Newcastle and Sydney</span><span class="pj-visit">Visit site<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-ext"/></svg></span></div>
+        </a>
+        <a class="pj rv pj--site" href="https://ultrafinishroofing.com.au/" target="_blank" rel="noopener" aria-label="Ultra Finish Roofing, roof restoration, Melbourne. Opens the live website." style="--p1:#FF6A13;--p2:#C2410C">
+          <div class="pj-panel"><div class="pj-browser"><div class="pj-bar" aria-hidden="true"><i></i><i></i><i></i><span>ultrafinishroofing.com.au</span><em class="pj-live">Live</em></div><div class="pj-view"><img class="pj-shot" src="assets/showcase/site-ultrafinish-hero.webp" alt="Ultra Finish Roofing website home page" width="1550" height="1198" loading="lazy" decoding="async"></div></div></div>
+          <div class="pj-foot"><span class="pj-no" aria-hidden="true">03</span><span class="pj-name">Ultra Finish Roofing</span><span class="pj-line">Roof restoration, Melbourne</span><span class="pj-visit">Visit site<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-ext"/></svg></span></div>
+        </a>
+        <a class="pj rv pj--site" href="https://www.precisionpaintingaus.com.au/" target="_blank" rel="noopener" aria-label="Precision Painting Aus, house painters, Melbourne. Opens the live website." style="--p1:#E2B640;--p2:#9A7417">
+          <div class="pj-panel"><div class="pj-browser"><div class="pj-bar" aria-hidden="true"><i></i><i></i><i></i><span>precisionpaintingaus.com.au</span><em class="pj-live">Live</em></div><div class="pj-view"><img class="pj-shot" src="assets/showcase/site-precisionpainting-hero.webp" alt="Precision Painting Aus website home page" width="1550" height="1065" loading="lazy" decoding="async"></div></div></div>
+          <div class="pj-foot"><span class="pj-no" aria-hidden="true">04</span><span class="pj-name">Precision Painting Aus</span><span class="pj-line">House painters, Melbourne</span><span class="pj-visit">Visit site<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-ext"/></svg></span></div>
+        </a>
+        <a class="pj rv pj--site" href="https://www.buildmarque.com.au/" target="_blank" rel="noopener" aria-label="Buildmarque, medical and dental fitouts, Melbourne. Opens the live website." style="--p1:#1B4F9C;--p2:#0A2A57">
+          <div class="pj-panel"><div class="pj-browser"><div class="pj-bar" aria-hidden="true"><i></i><i></i><i></i><span>buildmarque.com.au</span><em class="pj-live">Live</em></div><div class="pj-view"><img class="pj-shot" src="assets/showcase/site-buildmarque-hero2.webp" alt="Buildmarque website home page" width="1550" height="1092" loading="lazy" decoding="async"></div></div></div>
+          <div class="pj-foot"><span class="pj-no" aria-hidden="true">05</span><span class="pj-name">Buildmarque</span><span class="pj-line">Medical and dental fitouts, Melbourne</span><span class="pj-visit">Visit site<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-ext"/></svg></span></div>
+        </a>
+        <a class="pj rv pj--site" href="https://www.buildingpropertyinspections.com.au/" target="_blank" rel="noopener" aria-label="Building Property Inspections Melbourne, building and pest inspections. Opens the live website." style="--p1:#F7941D;--p2:#C76A06">
+          <div class="pj-panel"><div class="pj-browser"><div class="pj-bar" aria-hidden="true"><i></i><i></i><i></i><span>buildingpropertyinspections.com.au</span><em class="pj-live">Live</em></div><div class="pj-view"><img class="pj-shot" src="assets/showcase/site-bpim-hero2.webp" alt="Building Property Inspections Melbourne website home page" width="1550" height="1179" loading="lazy" decoding="async"></div></div></div>
+          <div class="pj-foot"><span class="pj-no" aria-hidden="true">06</span><span class="pj-name">Building Property Inspections Melbourne</span><span class="pj-line">Building and pest inspections</span><span class="pj-visit">Visit site<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-ext"/></svg></span></div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="res" id="facts" aria-labelledby="facts-title">
+    <div class="wrap">
+      <div class="sec-head"><p class="sec-eyebrow rv">Before you decide</p><h2 class="lit" id="facts-title"><span class="w">The</span> <span class="w">short</span> <span class="outline"><span class="w">version.</span></span></h2></div>
+      <p class="res-note rv">Reviews and listings: Digital Movement. Offer and invoice: our UK company, Digital Movement Marketing Ltd.</p>
+      <div class="res-fan rv" id="resFan">
+        <article class="res-card"><p class="res-tag">Price</p><p class="res-num">$2,495</p><p class="res-label">One-time, paid only after you approve in writing</p><p class="res-meta">Up to seven pages, writing included</p></article>
+        <article class="res-card res-card--grad"><p class="res-tag">Deposit</p><p class="res-num">$0</p><p class="res-label">No deposit or card to ask for a preview</p><p class="res-meta">No approval, no invoice</p></article>
+        <article class="res-card"><p class="res-tag">Google</p><p class="res-num">5.0</p><p class="res-label">From 100 Google reviews, as of Oct. 19, 2026</p><p class="res-meta">Digital Movement</p></article>
+        <article class="res-card res-card--grad"><p class="res-tag">Agency list</p><p class="res-num">Top 10</p><p class="res-label">Cape Digital, 2026: 7th of 10</p><p class="res-meta">Digital Movement</p></article>
+        <article class="res-card"><p class="res-tag">Agency list</p><p class="res-num">Listed</p><p class="res-label">Digital Reference, September 2026: 3rd of 10</p><p class="res-meta">Digital Movement</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="proc" id="how" aria-labelledby="how-title">
+    <div class="proc-dust" id="procDust" aria-hidden="true"></div>
+    <div class="wrap">
+      <div class="sec-head"><p class="sec-eyebrow rv">How it works, in four steps</p><h2 class="lit" id="how-title"><span class="w">Request.</span> <span class="w">Build.</span> <span class="w">Review.</span> <span class="outline"><span class="w">Approve.</span></span></h2></div>
+      <div class="proc-rail" id="procRail">
+        <span class="proc-spine" id="procSpine" aria-hidden="true"></span>
+        <span class="proc-orb" id="procOrb" aria-hidden="true"></span>
+        <ol class="proc-list">
+          <li class="proc-step">
+            <span class="proc-node" aria-hidden="true"></span>
+            <div class="proc-card">
+              <p class="proc-kicker"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-s1"/></svg><span>Step 1</span></p>
+              <h3>Request your preview</h3>
+              <p>Answer two quick questions and leave your number in the form on this page (or in our Facebook or Instagram ad). We call you within 1 business day, during US business hours, to talk through your services, pages and timing.</p>
+              <ul class="proc-points"><li>Two quick questions and your phone number</li><li>Callback within 1 business day</li><li>During US business hours</li><li>Timing confirmed on this call</li></ul>
+              <p class="proc-out"><strong>Outcome:</strong> You know your pages and timing, plus hosting and domain costs, before anything is built.</p>
+            </div>
+          </li>
+          <li class="proc-step">
+            <span class="proc-node" aria-hidden="true"></span>
+            <div class="proc-card">
+              <p class="proc-kicker"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-s2"/></svg><span>Step 2</span></p>
+              <h3>We build your website first</h3>
+              <p>Up to seven agreed pages, with writing, mobile layouts and a contact form. We build it privately. Nothing goes live yet.</p>
+              <ul class="proc-points"><li>WordPress, up to seven agreed pages</li><li>Writing based on your services and facts</li><li>Mobile layouts and a contact form</li><li>Private until you approve and pay</li></ul>
+              <p class="proc-out"><strong>Outcome:</strong> A finished private preview of every agreed page.</p>
+            </div>
+          </li>
+          <li class="proc-step">
+            <span class="proc-node" aria-hidden="true"></span>
+            <div class="proc-card">
+              <p class="proc-kicker"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-s3"/></svg><span>Step 3</span></p>
+              <h3>Review and ask for changes</h3>
+              <p>You get a private link to your finished website. Ask for changes as often as you like, on the agreed pages, until you're happy with it.</p>
+              <ul class="proc-points"><li>Private link to every agreed page</li><li>Desktop, iPhone, Android and tablet</li><li>Unlimited feedback rounds</li><li>Still nothing live</li></ul>
+              <p class="proc-out"><strong>Outcome:</strong> A website you've checked page by page, before you pay anything.</p>
+            </div>
+          </li>
+          <li class="proc-step">
+            <span class="proc-node" aria-hidden="true"></span>
+            <div class="proc-card">
+              <p class="proc-kicker"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-s4"/></svg><span>Step 4</span></p>
+              <h3>Approve, then pay</h3>
+              <p>You pay only after you approve it in writing: then we send one invoice for $2,495. After payment, your website goes live and we hand it over to you. No approval, no invoice.</p>
+              <ul class="proc-points"><li>Approval in writing; an email is enough</li><li>One invoice: $2,495, one-time</li><li>Goes live after payment</li><li>Not replying is not approval</li></ul>
+              <p class="proc-out"><strong>Outcome:</strong> Your website goes live and is handed over, with a license inventory, so it can move to another provider.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+      <div class="proc-goal rv">
+        <h3>You approve before you pay</h3>
+        <p>You see every agreed page on your own devices before any invoice. Timing is confirmed on the first call; we don't promise a delivery date before that. No approval, no invoice.</p>
+      </div>
+      <p class="proc-cta rv"><a class="btn btn--primary" href="#request">Request your preview<span class="btn-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><use href="#i-arrow"/></svg></span></a></p>
+    </div>
+  </section>
+
+  <section class="creds" id="about" aria-labelledby="about-title">
+    <div class="wrap">
+      <div class="sec-head"><p class="sec-eyebrow rv">Who we are</p><h2 class="lit" id="about-title"><span class="w">Who</span> <span class="w">will</span> <span class="w">you</span> <span class="w">be</span> <span class="outline"><span class="w">dealing</span> <span class="w">with?</span></span></h2><p class="sec-sub rv">A registered company with named directors. Each fact below links to its public record.</p></div>
       <div class="people">
-        <div class="person">
-          <img src="assets/raoul-160-v1.2.webp" alt="Raoul Müller" width="80" height="80" loading="lazy" decoding="async">
+        <article class="val person rv">
+          <img src="assets/raoul-160-v1.2.webp" alt="Raoul Müller" width="84" height="84" loading="lazy" decoding="async">
           <h3>Raoul Müller</h3>
           <p class="role">Director, Digital Movement Marketing Ltd</p>
           <p>Identity verified at Companies House. Calls you back about your preview, within 1 business day during US business hours.</p>
-          <a class="src" href="https://find-and-update.company-information.service.gov.uk/company/17110525/officers" target="_blank" rel="noopener">Source: Companies House, officers</a>
-        </div>
-        <div class="person">
-          <img src="assets/martey-160-v1.2.webp" alt="Martey Quaye" width="80" height="80" loading="lazy" decoding="async">
+          <a class="src" href="https://find-and-update.company-information.service.gov.uk/company/17110525/officers" target="_blank" rel="noopener">Source: Companies House, officers<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-ext"/></svg></a>
+        </article>
+        <article class="val person rv">
+          <img src="assets/martey-160-v1.2.webp" alt="Martey Quaye" width="84" height="84" loading="lazy" decoding="async">
           <h3>Martey Quaye</h3>
           <p class="role">Director, Digital Movement Marketing Ltd</p>
           <p>Identity verified at Companies House. Co-director of the company that makes this offer and sends the invoice.</p>
-          <a class="src" href="https://find-and-update.company-information.service.gov.uk/company/17110525/officers" target="_blank" rel="noopener">Source: Companies House, officers</a>
-        </div>
-        <div class="person company">
+          <a class="src" href="https://find-and-update.company-information.service.gov.uk/company/17110525/officers" target="_blank" rel="noopener">Source: Companies House, officers<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-ext"/></svg></a>
+        </article>
+        <article class="val person company rv">
           <span class="badge" aria-hidden="true">UK</span>
           <h3>Digital Movement Marketing Ltd</h3>
           <p class="role">Company number 17110525 · Active</p>
           <p>Registered in England and Wales on March 23, 2026. Registered office: 128 City Road, London EC1V 2NX.</p>
-          <a class="src" href="https://find-and-update.company-information.service.gov.uk/company/17110525" target="_blank" rel="noopener">Source: Companies House, company record</a>
-        </div>
+          <a class="src" href="https://find-and-update.company-information.service.gov.uk/company/17110525" target="_blank" rel="noopener">Source: Companies House, company record<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-ext"/></svg></a>
+        </article>
       </div>
     </div>
   </section>
 
-  <section class="section" id="included" aria-labelledby="included-title">
-    <div class="wrap included">
-      <div>
-        <p class="kicker">What's included</p>
-        <h2 id="included-title">What do you get for $2,495?</h2>
-        <p class="intro">One finished WordPress website for your business, for $2,495 one-time.</p>
-        <ul class="checks">
-          <li>Up to seven pages: the ones your business needs. Seven is a ceiling, not a quota.</li>
-          <li>Writing for every agreed page, based on your services and the facts you give us.</li>
-          <li>Mobile layouts, so your website works on phones.</li>
-          <li>A contact form, so customers have a clear way to reach you.</li>
-          <li>A finished private preview of every agreed page, with unlimited feedback rounds before you decide.</li>
-          <li>On payment, we transfer the custom work we own and can assign, with a license inventory, so your website can move with you.</li>
-        </ul>
-      </div>
-      <div class="note">
-        <h3>Not part of this offer</h3>
-        <p>Online shops, booking systems, member areas, websites in more than one language, and ongoing marketing. If you need one of these, it needs its own quote.</p>
-        <h3>Hosting and domain</h3>
-        <p>Your hosting and your domain are set up in your own name and are not part of the $2,495. We tell you the options and costs before anything is built.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="section section-alt" id="faq" aria-labelledby="faq-title">
-    <div class="wrap narrow">
-      <p class="kicker">FAQ</p>
-      <h2 id="faq-title">What do people ask before they start?</h2>
-      <div class="faq">
-        <div>
-          <h3>Is there really no deposit?</h3>
-          <p>Yes. There is no deposit and no card for the preview. The only invoice is the $2,495, and we send it after you approve your finished website in writing.</p>
-        </div>
-        <div>
-          <h3>How many changes can I ask for?</h3>
-          <p>As many as you like. Feedback rounds are unlimited on the agreed pages until you approve your website. New features or pages outside the agreed scope need their own quote.</p>
-        </div>
-        <div>
-          <h3>What happens if I don't approve the preview?</h3>
-          <p>Then you don't pay for the build. No approval, no invoice: we close the preview. Not replying doesn't count as approval. Your own material, such as your text, photos and domain, stays yours.</p>
-        </div>
-        <div>
-          <h3>Who is this offer for?</h3>
-          <p>Business owners and decision-makers in the United States who need a new website or a redesign of their current one. The form asks two quick questions to check the fit.</p>
-        </div>
-        <div>
-          <h3>Why are your Google reviews on an Australian profile?</h3>
-          <p>Digital Movement started in Melbourne, Australia, and its Google reviews sit on that profile. The US offer is made by our UK company, Digital Movement Marketing Ltd.</p>
-        </div>
-        <div>
-          <h3>Can I move my website to another provider later?</h3>
-          <p>Yes. It's a WordPress website, so it can move to another provider. On payment, we transfer the custom work we own and can assign, with a license inventory. WordPress itself and third-party themes, plugins, fonts and images keep their own licenses, and the inventory lists them.</p>
-        </div>
-        <div>
-          <h3>How long does it take?</h3>
-          <p>We confirm the build timing on our first call, once we know your pages and what content you already have. We don't promise a delivery date before that.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="terms" aria-labelledby="terms-title">
-    <div class="wrap narrow">
-      <p class="kicker">Preview terms</p>
-      <h2 id="terms-title">What are the preview terms?</h2>
-      <p class="intro">The short version. You receive the full written terms before we start building.</p>
-      <ul class="terms">
-        <li><strong>One private preview per business.</strong> It covers every agreed page. Forms on the preview are in test mode, search engines don't index it, and it can't be used as your live website.</li>
-        <li><strong>Unlimited feedback rounds</strong> on the agreed pages until you approve.</li>
-        <li><strong>You approve in writing.</strong> An email is enough. Not replying doesn't count as approval.</li>
-        <li><strong>Payment of $2,495 only after written approval.</strong> Then we send one invoice. After payment, your website goes live and we hand over access, an export and the license inventory.</li>
-        <li><strong>No approval, no invoice.</strong> If you don't approve, there is no invoice for the build, and we close the preview. Your own text, photos and domain stay yours.</li>
-        <li><strong>Timing:</strong> we confirm it after our first call. We don't promise a delivery date before that.</li>
-      </ul>
-      <p class="terms-foot">The offer is made by Digital Movement Marketing Ltd, a company registered in England and Wales. Prices are in US dollars. Page updated October 19, 2026.</p>
-    </div>
-  </section>
-
-  <section class="dark band" aria-labelledby="band-title">
+  <section class="terms-sec" id="terms" aria-labelledby="terms-title">
     <div class="wrap">
-      <h2 id="band-title">See your website before you pay</h2>
-      <p>Request your preview in under a minute. We call you back within 1 business day, during US business hours. The request doesn't order a website or cost anything.</p>
-      <a class="btn" href="#request">Request your preview</a>
-      <!-- v1.2 slot: once the US Facebook page / Instagram account exist, add here:
-           <p class="band-alt">Prefer Facebook or Instagram? <a href="[US page URL]">Message us there</a></p> -->
+      <div class="sec-head"><p class="sec-eyebrow rv">Preview terms</p><h2 class="lit" id="terms-title"><span class="w">What</span> <span class="w">are</span> <span class="w">the</span> <span class="outline"><span class="w">preview</span> <span class="w">terms?</span></span></h2><p class="sec-sub rv">The short version. You receive the full written terms before we start building.</p></div>
+      <ul class="terms-list">
+        <li class="term rv"><span class="hc-ic" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><use href="#i-check"/></svg></span><p><strong>One private preview per business.</strong> It covers every agreed page. Forms on the preview are in test mode, search engines don't index it, and it can't be used as your live website.</p></li>
+        <li class="term rv"><span class="hc-ic" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><use href="#i-check"/></svg></span><p><strong>Unlimited feedback rounds</strong> on the agreed pages until you approve.</p></li>
+        <li class="term rv"><span class="hc-ic" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><use href="#i-check"/></svg></span><p><strong>You approve in writing.</strong> An email is enough. Not replying doesn't count as approval.</p></li>
+        <li class="term rv"><span class="hc-ic" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><use href="#i-check"/></svg></span><p><strong>Payment of $2,495 only after written approval.</strong> Then we send one invoice. After payment, your website goes live and we hand over access, an export and the license inventory.</p></li>
+        <li class="term rv"><span class="hc-ic" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><use href="#i-check"/></svg></span><p><strong>No approval, no invoice.</strong> If you don't approve, there is no invoice for the build, and we close the preview. Your own text, photos and domain stay yours.</p></li>
+        <li class="term rv"><span class="hc-ic" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><use href="#i-check"/></svg></span><p><strong>Timing:</strong> we confirm it after our first call. We don't promise a delivery date before that.</p></li>
+      </ul>
+      <p class="terms-foot rv">The offer is made by Digital Movement Marketing Ltd, a company registered in England and Wales. Prices are in US dollars. Page updated October 20, 2026.</p>
+    </div>
+  </section>
+
+  <section class="faq" id="faq" aria-labelledby="faq-title">
+    <div class="wrap">
+      <div class="sec-head"><p class="sec-eyebrow rv">Frequently asked questions</p><h2 class="lit" id="faq-title"><span class="w">What</span> <span class="w">do</span> <span class="w">people</span> <span class="w">ask</span> <span class="outline"><span class="w">before</span> <span class="w">they</span> <span class="w">start?</span></span></h2></div>
+      <div class="faq-cols">
+        <div class="faq-list rv">
+          <details class="faq-item"><summary><span class="faq-q">Is there really no deposit?</span><span class="faq-ic" aria-hidden="true"></span></summary><div class="faq-a"><p>Yes. There is no deposit and no card for the preview. The only invoice is the $2,495, and we send it after you approve your finished website in writing.</p></div></details>
+          <details class="faq-item"><summary><span class="faq-q">How many changes can I ask for?</span><span class="faq-ic" aria-hidden="true"></span></summary><div class="faq-a"><p>As many as you like. Feedback rounds are unlimited on the agreed pages until you approve your website. New features or pages outside the agreed scope need their own quote.</p></div></details>
+          <details class="faq-item"><summary><span class="faq-q">What happens if I don't approve the preview?</span><span class="faq-ic" aria-hidden="true"></span></summary><div class="faq-a"><p>Then you don't pay for the build. No approval, no invoice: we close the preview. Not replying doesn't count as approval. Your own material, such as your text, photos and domain, stays yours.</p></div></details>
+          <details class="faq-item"><summary><span class="faq-q">Who is this offer for?</span><span class="faq-ic" aria-hidden="true"></span></summary><div class="faq-a"><p>Business owners and decision-makers in the United States who need a new website or a redesign of their current one. The form asks two quick questions to check the fit.</p></div></details>
+        </div>
+        <div class="faq-list rv">
+          <details class="faq-item"><summary><span class="faq-q">Who is behind Digital Movement?</span><span class="faq-ic" aria-hidden="true"></span></summary><div class="faq-a"><p>Digital Movement is one team. The US offer is made and invoiced by our UK company, Digital Movement Marketing Ltd. Its directors are Raoul Müller and Martey Quaye, both identity-verified at Companies House.</p></div></details>
+          <details class="faq-item"><summary><span class="faq-q">Can I move my website to another provider later?</span><span class="faq-ic" aria-hidden="true"></span></summary><div class="faq-a"><p>Yes. It's a WordPress website, so it can move to another provider. On payment, we transfer the custom work we own and can assign, with a license inventory. WordPress itself and third-party themes, plugins, fonts and images keep their own licenses, and the inventory lists them.</p></div></details>
+          <details class="faq-item"><summary><span class="faq-q">How long does it take?</span><span class="faq-ic" aria-hidden="true"></span></summary><div class="faq-a"><p>We confirm the build timing on our first call, once we know your pages and what content you already have. We don't promise a delivery date before that.</p></div></details>
+        </div>
+      </div>
     </div>
   </section>
 
   <section class="contact" id="contact" aria-labelledby="contact-title">
-    <div class="wrap contact-grid">
-      <div>
-        <h2 id="contact-title">Contact</h2>
-        <p class="contact-lead">Questions first? Call or email us. A person reads every message.</p>
+    <div class="wrap">
+      <div class="sec-head"><p class="sec-eyebrow rv">Contact</p><h2 class="lit" id="contact-title"><span class="w">Still</span> <span class="w">unsure?</span> <span class="outline"><span class="w">Ask</span> <span class="w">us.</span></span></h2></div>
+      <div class="contact-grid">
+        <div class="contact-panel rv">
+          <h3>Talk to a person</h3>
+          <p class="contact-intro">Email office@digitalmovement.uk or call our UK office at +44 7865 064463, Monday through Friday, 9 am–5 pm UK time. A person reads every message.</p>
+          <ul class="contact-rows">
+            <li><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-phone"/></svg><div><p class="c-k">Phone</p><p class="c-v"><a href="tel:+447865064463">+44 7865 064463</a></p><p class="c-sub">UK office, Monday to Friday, 9 am to 5 pm UK time</p></div></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-mail"/></svg><div><p class="c-k">Email</p><p class="c-v"><a href="mailto:office@digitalmovement.uk">office@digitalmovement.uk</a></p><p class="c-sub">A person reads every message</p></div></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-clock"/></svg><div><p class="c-k">Callbacks</p><p class="c-v">Within 1 business day</p><p class="c-sub">During US business hours, after you request your preview</p></div></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-pin"/></svg><div><p class="c-k">Company and address</p><p class="c-v">Digital Movement Marketing Ltd, 128 City Road, London EC1V 2NX, United Kingdom</p><p class="c-sub">Registered in England and Wales, company number 17110525</p></div></li>
+          </ul>
+          <div class="contact-social"><a href="https://www.instagram.com/digitalmovement_us/" target="_blank" rel="noopener" aria-label="Digital Movement US on Instagram"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-ig"/></svg></a><a href="https://www.facebook.com/profile.php?id=1459257597261170" target="_blank" rel="noopener" aria-label="Digital Movement US on Facebook"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-fb"/></svg></a></div>
+          <div class="contact-person">
+            <div class="contact-person-in">
+              <img src="assets/raoul-160-v1.2.webp" alt="Raoul Müller" width="58" height="58" loading="lazy" decoding="async">
+              <p><strong>Raoul Müller</strong>, director of Digital Movement Marketing Ltd, calls you back within 1 business day, during US business hours.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-panel contact-panel--form lead rv" id="contact-form" data-prefix="c-" data-source="contact">
+          <h3 id="c-title">Request your preview</h3>
+          <p class="contact-intro">Answer two quick questions, leave your phone number, and Raoul will call you back to talk through services, pages and timing.</p>
+          <form id="c-form" novalidate aria-labelledby="c-title" data-endpoint="https://api.hsforms.com/submissions/v3/integration/submit/149472643/441b02d8-30a7-4d1b-91f3-981f87f298b0">
+            <fieldset class="q" id="c-q-owner">
+              <legend>Are you the owner or a decision-maker of the business?</legend>
+              <div class="pills">
+                <label><input type="radio" name="owner" value="yes" required><span>Yes</span></label>
+                <label><input type="radio" name="owner" value="no"><span>No</span></label>
+              </div>
+            </fieldset>
+            <fieldset class="q" id="c-q-budget">
+              <legend>$2,495 one-time, paid only after you approve it. Does that fit your budget?</legend>
+              <div class="pills">
+                <label><input type="radio" name="budget" value="yes" required><span>Yes</span></label>
+                <label><input type="radio" name="budget" value="no"><span>No</span></label>
+              </div>
+            </fieldset>
+            <p class="field-error q-error" id="c-q-error" hidden>Please answer both questions.</p>
+            <div class="fields" id="c-fields">
+              <div class="grid-2">
+                <div class="field">
+                  <label for="c-name">Full name</label>
+                  <input id="c-name" name="name" type="text" autocomplete="name" required aria-describedby="c-e-name" placeholder="Jane Smith">
+                  <p class="field-error" id="c-e-name" hidden>Please enter your name.</p>
+                </div>
+                <div class="field">
+                  <label for="c-phone">Phone</label>
+                  <input id="c-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" required aria-describedby="c-e-phone" placeholder="(555) 123-4567">
+                  <p class="field-error" id="c-e-phone" hidden>Please enter a phone number with area code.</p>
+                </div>
+                <div class="field">
+                  <label for="c-email">Email</label>
+                  <input id="c-email" name="email" type="email" autocomplete="email" required aria-describedby="c-e-email" placeholder="jane@yourbusiness.com">
+                  <p class="field-error" id="c-e-email" hidden>Please enter a valid email address.</p>
+                </div>
+                <div class="field">
+                  <label for="c-company">Business name</label>
+                  <input id="c-company" name="company" type="text" autocomplete="organization" required aria-describedby="c-e-company" placeholder="Smith Plumbing">
+                  <p class="field-error" id="c-e-company" hidden>Please enter your business name.</p>
+                </div>
+              </div>
+              <div class="hp" aria-hidden="true">
+                <label for="c-website">Leave this field empty</label>
+                <input id="c-website" name="company_website" type="text" tabindex="-1" autocomplete="off">
+              </div>
+              <div class="consent">
+                <input id="c-consent" name="consent" type="checkbox" required aria-describedby="c-e-consent">
+                <p class="consent-text"><label for="c-consent"><strong>I agree to calls and texts about my request.</strong> Digital Movement may call or text you at this number about your website request. Message and data rates may apply. Text STOP to stop. Consent is not required to buy anything.</label> <a href="privacy/">Privacy notice</a></p>
+                <p class="field-error" id="c-e-consent" hidden>Please tick the box so we may call you back.</p>
+              </div>
+              <button class="btn btn--primary btn--block" type="submit" id="c-submit"><span class="btn-label">Request my preview</span><span class="btn-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><use href="#i-arrow"/></svg></span></button>
+              <p class="reassure"><span class="lock" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><use href="#i-check"/></svg></span>Unlimited feedback rounds. You pay only when you approve.</p>
+              <p class="form-fine">No deposit, no card. You pay $2,495, one-time, only after you approve your website in writing.</p>
+            </div>
+            <div class="form-state" id="c-state-no" hidden tabindex="-1">
+              <h3>Thanks for checking</h3>
+              <p>This offer is for business owners and decision-makers, at $2,495 paid after approval. If that changes, you're welcome back anytime.</p>
+              <button class="link-btn" type="button" id="c-restart">Change my answers</button>
+            </div>
+            <p class="form-alert" id="c-alert" role="alert" hidden></p>
+            <noscript><p class="form-alert">This form needs JavaScript. Call <a href="tel:+447865064463">+44 7865 064463</a> or email <a href="mailto:office@digitalmovement.uk">office@digitalmovement.uk</a>.</p></noscript>
+          </form>
+          <div class="form-state form-done" id="c-state-done" hidden tabindex="-1">
+            <span class="ok-ic" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><use href="#i-check"/></svg></span>
+            <h3>Thanks! We'll call you within 1 business day</h3>
+            <p>We'll call or text you during US business hours to talk through your services, pages and timing. This request doesn't order a website or cost anything.</p>
+          </div>
+        </div>
       </div>
-      <dl class="contact-list">
-        <div><dt>Phone</dt><dd><a href="tel:+447865064463">+44 7865 064463</a> <span>UK office, Monday to Friday, 9 am to 5 pm UK time</span></dd></div>
-        <div><dt>Email</dt><dd><a href="mailto:office@digitalmovement.uk">office@digitalmovement.uk</a></dd></div>
-        <div><dt>Callbacks</dt><dd>Within 1 business day, during US business hours, after you request your preview</dd></div>
-        <div><dt>Company</dt><dd>Digital Movement Marketing Ltd · Registered in England and Wales, company number 17110525</dd></div>
-        <div><dt>Address</dt><dd>128 City Road, London EC1V 2NX, United Kingdom</dd></div>
-      </dl>
     </div>
   </section>
 </main>
 
-<footer class="dark footer">
+<footer class="site-foot">
   <div class="wrap">
-    <div class="footer-row">
-      <a class="brand" href="./" aria-label="Digital Movement home">
-        <img src="assets/dm-logo-light.svg" alt="Digital Movement" width="232" height="26">
-      </a>
-      <nav class="footer-links" aria-label="Footer">
-        <a href="#how">How it works</a>
-        <a href="#work">Our work</a>
-        <a href="#reviews">Reviews</a>
-        <a href="#about">Who we are</a>
-        <a href="#faq">Questions</a>
-        <a href="#terms">Preview terms</a>
-        <a href="privacy/">Privacy notice</a>
-      </nav>
+    <div class="foot-top">
+      <div>
+        <a class="foot-logo" href="./" aria-label="Digital Movement, back to the top of the offer"><img src="assets/dm-logo-positive-crop-v1.3.svg" alt="Digital Movement" width="230" height="28" loading="lazy" decoding="async"></a>
+        <p class="foot-by">Websites for US businesses</p>
+        <p class="foot-blurb">Digital Movement is one team. This offer is made and invoiced by our UK company, Digital Movement Marketing Ltd.</p>
+        <div class="foot-social"><a href="https://www.instagram.com/digitalmovement_us/" target="_blank" rel="noopener" aria-label="Digital Movement US on Instagram"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-ig"/></svg></a><a href="https://www.facebook.com/profile.php?id=1459257597261170" target="_blank" rel="noopener" aria-label="Digital Movement US on Facebook"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-fb"/></svg></a></div>
+      </div>
+      <div class="foot-col">
+        <h3>Page</h3>
+        <ul><li><a href="#how">How it works</a></li><li><a href="#work">Our work</a></li><li><a href="#reviews">Reviews</a></li><li><a href="#about">Who we are</a></li><li><a href="#faq">Questions</a></li></ul>
+      </div>
+      <div class="foot-col">
+        <h3>The offer</h3>
+        <ul><li><a href="#included">What's included</a></li><li><a href="#facts">The short version</a></li><li><a href="#terms">Preview terms</a></li><li><a href="privacy/">Privacy notice</a></li></ul>
+      </div>
+      <div class="foot-col foot-contact">
+        <h3>Get in touch</h3>
+        <ul>
+          <li><a class="fc-strong" href="tel:+447865064463">+44 7865 064463</a><span class="fc-sub">UK office, Monday to Friday, 9 am to 5 pm UK time</span></li>
+          <li><a class="fc-strong" href="mailto:office@digitalmovement.uk">office@digitalmovement.uk</a><span class="fc-sub">A person reads every message</span></li>
+          <li><span class="fc-strong">128 City Road, London EC1V 2NX</span><span class="fc-sub">United Kingdom</span></li>
+        </ul>
+        <a class="btn btn--primary btn--sm foot-cta" href="#request">Request your preview<span class="btn-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><use href="#i-arrow"/></svg></span></a>
+      </div>
     </div>
-    <p>Websites for US businesses are sold and invoiced by Digital Movement Marketing Ltd, registered in England and Wales, company number 17110525. Prices in US dollars.</p>
-    <p>© 2026 Digital Movement Marketing Ltd · Page updated October 19, 2026</p>
+    <div class="foot-bottom">
+      <p class="foot-fine">Websites for US businesses are sold and invoiced by Digital Movement Marketing Ltd, registered in England and Wales, company number 17110525. Prices in US dollars.</p>
+      <p class="foot-fine">© 2026 Digital Movement Marketing Ltd · Page updated October 20, 2026 · <a href="privacy/">Privacy notice</a></p>
+    </div>
   </div>
 </footer>
 
-<div class="sticky-cta" id="sticky-cta" hidden>
-  <a class="btn" href="#request">Request your preview</a>
-  <a class="call" href="tel:+447865064463" aria-label="Call +44 7865 064463"><span class="phone-icon" aria-hidden="true"></span>Call</a>
-</div>
+<button type="button" class="to-top" id="dmtToTop" aria-label="Back to top">
+  <svg class="to-top-ring" viewBox="0 0 52 52" aria-hidden="true" focusable="false"><circle class="to-top-track" cx="26" cy="26" r="24"/><circle class="to-top-bar" cx="26" cy="26" r="24" pathLength="100"/></svg>
+  <svg class="to-top-arrow" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-up"/></svg>
+</button>
+<a class="dmt-pill is-hidden" id="dmtPill" href="#request"><span class="dmt-pill-txt">Request your preview</span><span class="dmt-pill-ic" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><use href="#i-arrow"/></svg></span></a>
 
-<script src="assets/form-v1.2.3.js" defer></script>
+<script src="assets/site-v1.3.js" defer></script>
+<script src="assets/form-v1.3.js" defer></script>
 </body>
 </html>
