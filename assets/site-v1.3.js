@@ -3,7 +3,7 @@
     1 burger + drawer (drawer starts under the header: --dmt-hdr-b)      7 pinned horizontal rail (#wwdRail)
     2 header .stuck after the hero, scroll-progress line, to-top ring     8 reviews: first batch + "Read more reviews"
     3 .rv reveal, staggered 90 ms                                         9 work frames: wheel scroll inside the frame, pointer spotlight
-    4 .lit per-letter light-up (.accent scrim, .outline stroke)           10 mobile "Request your preview" pill, hidden while a form is on screen
+    4 .lit per-letter light-up (.accent scrim, .outline stroke)           10 mobile "Request your preview" pill: after the hero, never over a form
     5 process spine: fill, orb, 34 dust specks, passed nodes              11 hero proof strip fit (zoom)
     6 results fan                                                         12 marquee duplicates stay out of the tab order
    prefers-reduced-motion: every effect is off and content shows in its final state. No network, no cookies, no storage. */
@@ -303,23 +303,29 @@
     });
   });
 
-  /* 10. Mobile pill: hidden while either form is on screen (or the menu is open); a tap goes to the
-         nearer of the two forms. */
+  /* 10. Mobile pill: appears only once the hero has scrolled above the top of the viewport; hidden again
+         while either form is on screen (the menu hides it via body.drawer-open in CSS). The markup starts
+         with .is-hidden so the first screen never shows it. A tap goes to the nearer of the two forms. */
   (function () {
-    var pill = $('#dmtPill'), forms = $$('.lead');
+    var pill = $('#dmtPill'), forms = $$('.lead'), heroBox = $('#home');
     if (!pill || !forms.length) return;
+    var pastHero = false, onScreen = [];
+    function apply() { pill.classList.toggle('is-hidden', !pastHero || onScreen.length > 0); }
+    function checkHero() { pastHero = heroBox ? heroBox.getBoundingClientRect().bottom < 0 : true; apply(); }
     if ('IntersectionObserver' in window) {
-      var onScreen = [];
       var watcher = new IntersectionObserver(function (entries) {
         entries.forEach(function (entry) {
           var i = onScreen.indexOf(entry.target);
           if (entry.isIntersecting && i < 0) onScreen.push(entry.target);
           if (!entry.isIntersecting && i >= 0) onScreen.splice(i, 1);
         });
-        pill.classList.toggle('is-hidden', onScreen.length > 0);
+        apply();
       }, { rootMargin: '0px 0px -20% 0px', threshold: 0 });
       forms.forEach(function (f) { watcher.observe(f); });
     }
+    onScroll(perFrame(checkHero));
+    onResize(perFrame(checkHero));
+    checkHero();
     pill.addEventListener('click', function (e) {
       var best = null, bestDist = Infinity;
       forms.forEach(function (f) { var d = Math.abs(f.getBoundingClientRect().top); if (d < bestDist) { bestDist = d; best = f; } });
